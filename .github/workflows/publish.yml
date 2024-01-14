@@ -20,8 +20,8 @@ jobs:
       - name: 📥 Install Dependencies
         run: npm install
 
-      # - name: 💅 Lint
-      #   run: npm run lint
+      - name: 💅 Lint
+        run: npm run lint
 
       - name: 🧪 Unit Tests
         run: npm run test
