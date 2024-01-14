@@ -63,4 +63,26 @@ export interface TooltipProps {
      * </Tooltip>
      */
     hasArrow?: boolean;
+    /**
+     * The color of the tooltip.
+     * @type {string}
+     * @optional
+     * @default "rgb(97 97 97 / 92%)"
+     * @example
+     * <Tooltip backgroundColor="backgroundColor" content="This is a tooltip">
+     *    <button>Hover me</button>
+     * </Tooltip>
+     */
+    backgroundColor?: string;
+    /**
+     * The color of the tooltip.
+     * @type {string}
+     * @optional
+     * @default "#fff"
+     * @example
+     * <Tooltip color="#fff" content="This is a tooltip">
+     *    <button>Hover me</button>
+     * </Tooltip>
+     */
+    color?: string;
 }

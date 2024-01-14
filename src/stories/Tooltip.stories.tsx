@@ -41,10 +41,30 @@ const meta: Meta<typeof Tooltip> = {
 				type: "boolean",
 			},
 		},
+		backgroundColor: {
+			description: "The background color of the tooltip",
+			control: {
+				type: "color",
+			},
+		},
+		color: {
+			description: "The color of the tooltip",
+			control: {
+				type: "color",
+			},
+		},
 	},
 	parameters: {
 		controls: {
-			include: ["content", "placement", "delay", "animation", "hasArrow"],
+			include: [
+				"content",
+				"placement",
+				"delay",
+				"animation",
+				"hasArrow",
+				"backgroundColor",
+				"color",
+			],
 		},
 		layout: "centered",
 	},
@@ -61,6 +81,8 @@ export const Default: Story = {
 		delay: 400,
 		animation: undefined,
 		hasArrow: false,
+		backgroundColor: "rgb(97 97 97 / 92%)",
+		color: "#fff",
 	},
 };
 Default.storyName = "Default";

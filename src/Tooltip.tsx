@@ -10,6 +10,8 @@ export function Tooltip({
 	delay,
 	animation,
 	hasArrow,
+	backgroundColor,
+	color,
 }: TooltipProps) {
 	// Component variables
 	let timeout: NodeJS.Timeout;
@@ -45,6 +47,10 @@ export function Tooltip({
 					className={`${styles.tooltip_text} ${styles[`${placement ?? "top"}`]} ${
 						styles[`${animation ?? ""}`]
 					} ${hasArrow ? styles.arrow : ""}`}
+					style={{
+						backgroundColor: backgroundColor ?? "unset",
+						color: color ?? "unset",
+					}}
 				>
 					{content}
 				</div>
