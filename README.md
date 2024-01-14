@@ -1,4 +1,4 @@
-![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip) ![minified](https://badgen.net/bundlephobia/min/react-simtip) ![minified gzip](https://badgen.net/bundlephobia/minzip/react-simtip)
+![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
 
 # ⚠️ WARNING: This package is under development and is not ready for production use. ⚠️
 
@@ -37,13 +37,13 @@ export default App;
 
 ## Props
 
-| Prop        | Type      | Default     | Description                                                                |
-| ----------- | --------- | ----------- | -------------------------------------------------------------------------- | --------------------------- |
-| `content`   | `string`  | `ReactNode` | `null`                                                                     | The content of the tooltip. |
-| `position`  | `string`  | `top`       | The position of the tooltip. Can be `top`, `bottom`, `left` or `right`.    |
-| `delay`     | `number`  | `400`       | The delay in milliseconds before the tooltip appears.                      |
-| `animation` | `string`  | `fade`      | The animation of the tooltip. Can be `fade` (more animations coming soon). |
-| `hasArrow`  | `boolean` | `true`      | Whether the tooltip has an arrow or not.                                   |
+| Name        | Type                    | Default | Description                                                                |
+| ----------- | ----------------------- | ------- | -------------------------------------------------------------------------- |
+| `content`   | `string` or `ReactNode` | null    | The content of the tooltip.                                                |
+| `position`  | `string`                | `top`   | The position of the tooltip. Can be `top`, `bottom`, `left` or `right`.    |
+| `delay`     | `number`                | `400`   | The delay in milliseconds before the tooltip appears.                      |
+| `animation` | `fade`                  | null    | The animation of the tooltip. Can be `fade` (more animations coming soon). |
+| `hasArrow`  | `boolean`               | null    | Whether the tooltip has an arrow or not.                                   |
 
 ## License
 
