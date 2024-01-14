@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import styles from "./Tooltip.module.scss";
 
 interface TooltipProps {
@@ -86,7 +87,7 @@ export function Tooltip({
 	const showTip = () => {
 		timeout = setTimeout(() => {
 			setActive(true);
-		}, delay || 400);
+		}, delay ?? 400);
 	};
 
 	const hideTip = () => {
@@ -107,8 +108,8 @@ export function Tooltip({
 			{children}
 			{active && (
 				<div
-					className={`${styles.tooltip_text} ${styles[`${placement || "top"}`]} ${
-						styles[`${animation || ""}`]
+					className={`${styles.tooltip_text} ${styles[`${placement ?? "top"}`]} ${
+						styles[`${animation ?? ""}`]
 					} ${hasArrow ? styles.arrow : ""}`}
 				>
 					{content}
