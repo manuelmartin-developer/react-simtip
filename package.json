@@ -1,19 +1,30 @@
 {
-  "name": "@manuelmartindev/typescript-react-library-template",
+  "name": "react-simtip",
   "author": "Manuel Martín",
   "license": "MIT",
   "version": "1.0.0",
+  "description": "A simple tooltip component for React",
+  "keywords": [
+    "react",
+    "tooltip",
+    "simtip",
+    "component"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelmartin-developer/react-simtip"
+  },
+  "bugs": {
+    "url": "https://github.com/manuelmartin-developer/react-simtip/issues"
+  },
+  "homepage": "https://github.com/manuelmartin-developer/react-simtip#readme",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/my-component.umd.cjs",
-  "module": "./dist/my-component.js",
+  "main": "./dist/react-simtip.umd.cjs",
+  "module": "./dist/react-simtip.js",
   "types": "./dist/index.d.ts",
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "scripts": {
     "build": "vite build",
     "test": "jest",
@@ -80,6 +91,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.0.17",

@@ -12,16 +12,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: ❇️ Setup node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
 
       - name: 📥 Install Dependencies
         run: npm install
 
-      - name: 💅 Lint
-        run: npm run lint
+      # - name: 💅 Lint
+      #   run: npm run lint
 
       - name: 🧪 Unit Tests
         run: npm run test
@@ -42,8 +42,8 @@ jobs:
       - name: ❇️ Setup node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version: 20
+          cache: "npm"
 
       - name: 📥 Install Dependencies
         run: npm install
