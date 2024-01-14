@@ -52,6 +52,20 @@ export default App;
 | `animation` | `fade`                  | null    | The animation of the tooltip. Can be `fade` (more animations coming soon). |
 | `hasArrow`  | `boolean`               | null    | Whether the tooltip has an arrow or not.                                   |
 
+## TODO
+
+- [ ] Fix the position in HTML content tooltips.
+- [ ] Check bundle size.
+- [ ] Add more animations.
+- [ ] Add more positions (top-left, top-right, bottom-left, bottom-right).
+- [ ] Add offset (distance between the tooltip and the anchor).
+- [ ] Add some trigger options (click, focus, etc.).
+- [ ] Add some options to control the tooltip's size (width, height, etc.).
+- [ ] Add more options to delay the tooltip's appearance and disappearance (enterDelay, leaveDelay, etc.)
+- [ ] Add tests.
+- [ ] Add more customization options (colors, sizes, etc.).
+- [ ] Add more examples.
+
 ## License
 
 The MIT License.
