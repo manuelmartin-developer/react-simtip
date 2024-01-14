@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import { TooltipProps } from ".";
 import styles from "./Tooltip.module.scss";
+import { TooltipProps } from "./Tooltip.types";
 
 export function Tooltip({
 	children,
