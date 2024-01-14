@@ -7,8 +7,10 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
 	plugins: [react(), dts(), cssInjectedByJsPlugin()],
 	build: {
+		minify: true,
 		lib: {
 			entry: resolve(__dirname, "src/index.ts"),
+			formats: ["es", "umd"],
 			name: "react-simtip",
 			fileName: "react-simtip",
 		},

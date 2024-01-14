@@ -5,3 +5,59 @@
 # react-simtip
 
 A simple tooltip component for React.
+
+## Installation
+
+```bash
+npm install react-simtip
+```
+
+or
+
+```bash
+yarn add react-simtip
+```
+
+## Usage
+
+```jsx
+import React from "react";
+import { Tooltip } from "react-simtip";
+
+const App = () => {
+	return (
+		<Tooltip content="Hello World!">
+			<button>Hover me!</button>
+		</Tooltip>
+	);
+};
+
+export default App;
+```
+
+## Props
+
+| Prop        | Type      | Default     | Description                                                                |
+| ----------- | --------- | ----------- | -------------------------------------------------------------------------- | --------------------------- |
+| `content`   | `string`  | `ReactNode` | `null`                                                                     | The content of the tooltip. |
+| `position`  | `string`  | `top`       | The position of the tooltip. Can be `top`, `bottom`, `left` or `right`.    |
+| `delay`     | `number`  | `400`       | The delay in milliseconds before the tooltip appears.                      |
+| `animation` | `string`  | `fade`      | The animation of the tooltip. Can be `fade` (more animations coming soon). |
+| `hasArrow`  | `boolean` | `true`      | Whether the tooltip has an arrow or not.                                   |
+
+## License
+
+The MIT License.
+
+## Author
+
+<table>
+  <tr>
+    <td >
+      <img src="https://avatars.githubusercontent.com/u/75039957?v=4" width="64" height="64" alt="Manuel Martín">
+    </td>
+    <td>
+      <a href="https://github.com/manuelmartin-developer">Manuel Martín</a>
+    </td>
+  </tr>
+</table>
