@@ -6,6 +6,13 @@
 
 A simple tooltip component for React.
 
+- No dependencies.
+- Written in TypeScript.
+  <!-- - Test coverage with Jest and React Testing Library. -->
+  <!-- - Lightweight (less than 1kb gzipped). -->
+- Easy to use.
+- Customizable.
+
 ## Installation
 
 ```bash

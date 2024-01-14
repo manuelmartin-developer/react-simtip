@@ -2,7 +2,7 @@
   "name": "react-simtip",
   "author": "Manuel Martín",
   "license": "MIT",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple tooltip component for React",
   "keywords": [
     "react",
@@ -24,12 +24,6 @@
   ],
   "main": "./dist/react-simtip.umd.cjs",
   "module": "./dist/react-simtip.js",
-  "exports": {
-    ".": {
-      "import": "./dist/react-simtip.js",
-      "require": "./dist/react-simtip.umd.cjs"
-    }
-  },
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "vite build",
