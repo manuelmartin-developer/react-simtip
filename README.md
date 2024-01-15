@@ -64,24 +64,26 @@ export default App;
 
 #### Position
 
-| Name                 | Type      | Default | Description                                                  | Values                                                                                   |
-| -------------------- | --------- | ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `placement`          | `string`  | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right" |
-| `showDelay`          | `number`  | 400     | The delay before the tooltip appears (in milliseconds).      | Any number                                                                               |
-| `hideDelay`          | `number`  | 0       | The delay before the tooltip disappears (in milliseconds).   | Any number                                                                               |
-| `hasArrow`           | `boolean` | false   | Whether the tooltip has an arrow or not.                     | true, false                                                                              |
-| `arrowSize`          | `number`  | 6       | The size of the arrow (in pixels).                           | Any number                                                                               |
-| `distanceFromTarget` | `number`  | 30      | The distance between the tooltip and the anchor (in pixels). | Any number                                                                               |
+| Name                 | Type     | Default | Description                                                  | Values                                                                                   |
+| -------------------- | -------- | ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| `placement`          | `string` | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right" |
+| `showDelay`          | `number` | 400     | The delay before the tooltip appears (in milliseconds).      | Any number                                                                               |
+| `hideDelay`          | `number` | 0       | The delay before the tooltip disappears (in milliseconds).   | Any number                                                                               |
+| `distanceFromTarget` | `number` | 30      | The distance between the tooltip and the anchor (in pixels). | Any number                                                                               |
 
 #### Appearance
 
-| Name              | Type     | Default | Description                                   | Values                  |
-| ----------------- | -------- | ------- | --------------------------------------------- | ----------------------- |
-| `fontSize`        | `string` | "1rem"  | The font size of the tooltip.                 | Any valid CSS font size |
-| `padding`         | `number` | 6       | The padding of the tooltip (in pixels).       | Any number              |
-| `borderRadius`    | `number` | 4       | The border radius of the tooltip (in pixels). | Any number              |
-| `backgroundColor` | `string` | "#000"  | The background color of the tooltip.          | Any valid CSS color     |
-| `color`           | `string` | "#fff"  | The text color of the tooltip.                | Any valid CSS color     |
+| Name              | Type      | Default | Description                                   | Values                  |
+| ----------------- | --------- | ------- | --------------------------------------------- | ----------------------- |
+| `fontSize`        | `string`  | "1rem"  | The font size of the tooltip.                 | Any valid CSS font size |
+| `padding`         | `number`  | 6       | The padding of the tooltip (in pixels).       | Any number              |
+| `borderRadius`    | `number`  | 4       | The border radius of the tooltip (in pixels). | Any number              |
+| `backgroundColor` | `string`  | "#000"  | The background color of the tooltip.          | Any valid CSS color     |
+| `color`           | `string`  | "#fff"  | The text color of the tooltip.                | Any valid CSS color     |
+| `hasArrow`        | `boolean` | false   | Whether the tooltip has an arrow or not.      | true, false             |
+| `arrowSize`       | `number`  | 6       | The size of the arrow (in pixels).            | Any number              |
+
+|
 
 #### Animation
 
