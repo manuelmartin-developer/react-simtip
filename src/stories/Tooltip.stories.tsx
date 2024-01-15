@@ -81,8 +81,8 @@ export const Default: Story = {
 		delay: 400,
 		animation: undefined,
 		hasArrow: false,
-		backgroundColor: "rgb(97 97 97 / 92%)",
-		color: "#fff",
+		backgroundColor: undefined,
+		color: undefined,
 	},
 };
 Default.storyName = "Default";

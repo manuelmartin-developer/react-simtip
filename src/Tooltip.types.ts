@@ -45,7 +45,7 @@ export interface TooltipProps {
 	 * The animation of the tooltip.
 	 * @type {"fade"}
 	 * @optional
-	 * @default "fade"
+	 * @default undefined
 	 * @example
 	 * <Tooltip animation="fade" content="This is a tooltip">
 	 *    <button>Hover me</button>

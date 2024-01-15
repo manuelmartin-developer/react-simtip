@@ -1,4 +1,4 @@
-![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
+![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-simtip?style=flat-square)](https://bundlephobia.com/package/react-simtip@latest) [![install size](https://packagephobia.com/badge?p=react-simtip)](https://packagephobia.com/result?p=react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
 
 # ⚠️ WARNING: This package is under development and is not ready for production use. ⚠️
 
@@ -48,15 +48,17 @@ export default App;
 
 ## Props
 
-| Name        | Type                    | Default | Description                                                                |
-| ----------- | ----------------------- | ------- | -------------------------------------------------------------------------- |
-| `content`   | `string` or `ReactNode` | null    | The content of the tooltip.                                                |
-| `position`  | `string`                | `top`   | The position of the tooltip. Can be `top`, `bottom`, `left` or `right`.    |
-| `delay`     | `number`                | `400`   | The delay in milliseconds before the tooltip appears.                      |
-| `animation` | `fade`                  | null    | The animation of the tooltip. Can be `fade` (more animations coming soon). |
-| `hasArrow`  | `boolean`               | null    | Whether the tooltip has an arrow or not.                                   |
+| Name              | Type                    | Default | Description                                                                |
+| ----------------- | ----------------------- | ------- | -------------------------------------------------------------------------- |
+| `content`         | `string` or `ReactNode` | null    | The content of the tooltip.                                                |
+| `position`        | `string`                | `top`   | The position of the tooltip. Can be `top`, `bottom`, `left` or `right`.    |
+| `delay`           | `number`                | `400`   | The delay in milliseconds before the tooltip appears.                      |
+| `animation`       | `fade`                  | null    | The animation of the tooltip. Can be `fade` (more animations coming soon). |
+| `hasArrow`        | `boolean`               | null    | Whether the tooltip has an arrow or not.                                   |
+| `backgroundColor` | `string`                | null    | The background color of the tooltip.                                       |
+| `color`           | `string`                | null    | The color of the tooltip.                                                  |
 
-## TODO
+<!-- ## TODO
 
 - [ ] Fix the position in HTML content tooltips.
 - [ ] Check bundle size.
@@ -68,11 +70,11 @@ export default App;
 - [ ] Add more options to delay the tooltip's appearance and disappearance (enterDelay, leaveDelay, etc.)
 - [ ] Add tests.
 - [ ] Add more customization options (colors, sizes, etc.).
-- [ ] Add more examples.
+- [ ] Add more examples. -->
 
 ## License
 
-The MIT License.
+The MIT License. See [LICENSE]("https://raw.githubusercontent.com/manuelmartin-developer/react-simtip/main/LICENSE") for more information.
 
 ## Author
 

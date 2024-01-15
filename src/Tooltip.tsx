@@ -48,8 +48,8 @@ export function Tooltip({
 						styles[`${animation ?? ""}`]
 					} ${hasArrow ? styles.arrow : ""}`}
 					style={{
-						backgroundColor: backgroundColor ?? "unset",
-						color: color ?? "unset",
+						backgroundColor: backgroundColor,
+						color: color,
 					}}
 				>
 					{content}
