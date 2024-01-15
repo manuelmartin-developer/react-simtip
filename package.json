@@ -2,7 +2,7 @@
   "name": "react-simtip",
   "author": "Manuel Martín",
   "license": "MIT",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A simple tooltip component for React",
   "keywords": [
     "react",
@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/manuelmartin-developer/react-simtip/issues"
   },
-  "homepage": "https://github.com/manuelmartin-developer/react-simtip#readme",
+  "homepage": "https://react-simtip.manuelmartin.dev/",
   "type": "module",
   "files": [
     "dist"

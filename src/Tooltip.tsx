@@ -7,11 +7,19 @@ export function Tooltip({
 	children,
 	content,
 	placement,
-	delay,
+	showDelay,
+	hideDelay,
 	animation,
+	className,
 	hasArrow,
 	backgroundColor,
 	color,
+	arrowSize,
+	distanceFromTarget,
+	padding,
+	animationDuration,
+	borderRadius,
+	fontSize,
 }: TooltipProps) {
 	// Component variables
 	let timeout: NodeJS.Timeout;
@@ -23,12 +31,14 @@ export function Tooltip({
 	const showTip = () => {
 		timeout = setTimeout(() => {
 			setActive(true);
-		}, delay ?? 400);
+		}, showDelay ?? 400);
 	};
 
 	const hideTip = () => {
-		clearInterval(timeout);
-		setActive(false);
+		clearTimeout(timeout);
+		setTimeout(() => {
+			setActive(false);
+		}, hideDelay ?? 0);
 	};
 
 	return (
@@ -44,12 +54,26 @@ export function Tooltip({
 			{children}
 			{active && (
 				<div
-					className={`${styles.tooltip_text} ${styles[`${placement ?? "top"}`]} ${
-						styles[`${animation ?? ""}`]
-					} ${hasArrow ? styles.arrow : ""}`}
+					className={`${className ? className : ""} ${styles.tooltip_text} ${
+						styles[`${placement ?? "top"}`]
+					} ${styles[`${animation ?? ""}`]} ${hasArrow ? styles.arrow : ""}`}
 					style={{
-						backgroundColor: backgroundColor,
-						color: color,
+						// @ts-ignore
+						"--tooltip-background-color": backgroundColor ?? "unset",
+						// @ts-ignore
+						"--tooltip-text-color": color ?? "unset",
+						// @ts-ignore
+						"--tooltip-arrow-size": `${arrowSize}px` ?? "unset",
+						// @ts-ignore
+						"--tooltip-distance": `${distanceFromTarget}px` ?? "unset",
+						// @ts-ignore
+						"--tooltip-padding": `${padding}px` ?? "unset",
+						// @ts-ignore
+						"--tooltip-animation-duration": `${animationDuration}ms` ?? "unset",
+						// @ts-ignore
+						"--tooltip-border-radius": `${borderRadius}px` ?? "unset",
+						// @ts-ignore
+						"--tooltip-font-size": `${fontSize}px` ?? "unset",
 					}}
 				>
 					{content}
