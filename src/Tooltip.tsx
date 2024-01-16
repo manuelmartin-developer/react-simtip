@@ -58,22 +58,22 @@ export function Tooltip({
 						styles[`${placement ?? "top"}`]
 					} ${styles[`${animation ?? ""}`]} ${hasArrow ? styles.arrow : ""}`}
 					style={{
-						// @ts-ignore
-						"--tooltip-background-color": backgroundColor ?? "unset",
-						// @ts-ignore
-						"--tooltip-text-color": color ?? "unset",
-						// @ts-ignore
-						"--tooltip-arrow-size": `${arrowSize}px` ?? "unset",
-						// @ts-ignore
-						"--tooltip-distance": `${distanceFromTarget}px` ?? "unset",
-						// @ts-ignore
-						"--tooltip-padding": `${padding}px` ?? "unset",
-						// @ts-ignore
-						"--tooltip-animation-duration": `${animationDuration}ms` ?? "unset",
-						// @ts-ignore
-						"--tooltip-border-radius": `${borderRadius}px` ?? "unset",
-						// @ts-ignore
-						"--tooltip-font-size": `${fontSize}px` ?? "unset",
+						...((backgroundColor && {
+							"--tooltip-background-color": backgroundColor,
+						}) as React.CSSProperties),
+						...((color && { "--tooltip-text-color": color }) as React.CSSProperties),
+						...((arrowSize && { "--tooltip-arrow-size": `${arrowSize}px` }) as React.CSSProperties),
+						...((distanceFromTarget && {
+							"--tooltip-distance": `${distanceFromTarget}px`,
+						}) as React.CSSProperties),
+						...((padding && { "--tooltip-padding": `${padding}px` }) as React.CSSProperties),
+						...((animationDuration && {
+							"--tooltip-animation-duration": `${animationDuration}ms`,
+						}) as React.CSSProperties),
+						...((borderRadius && {
+							"--tooltip-border-radius": `${borderRadius}px`,
+						}) as React.CSSProperties),
+						...((fontSize && { "--tooltip-font-size": `${fontSize}px` }) as React.CSSProperties),
 					}}
 				>
 					{content}

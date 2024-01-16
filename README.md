@@ -83,8 +83,6 @@ export default App;
 | `hasArrow`        | `boolean` | false   | Whether the tooltip has an arrow or not.      | true, false             |
 | `arrowSize`       | `number`  | 6       | The size of the arrow (in pixels).            | Any number              |
 
-|
-
 #### Animation
 
 | Name                | Type     | Default | Description                                      | Values                                                   |
