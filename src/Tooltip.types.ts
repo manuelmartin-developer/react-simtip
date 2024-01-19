@@ -10,6 +10,8 @@ type Placement =
 	| "top-right"
 	| "bottom-left"
 	| "bottom-right";
+type Trigger = "hover" | "click";
+
 export interface TooltipProps {
 	/**
 	 * The children of the tooltip.
@@ -42,6 +44,17 @@ export interface TooltipProps {
 	 * </Tooltip>
 	 */
 	placement?: Placement;
+	/**
+	 * The trigger event of the tooltip.
+	 * @type {"hover" | "click"}
+	 * @optional
+	 * @default "hover"
+	 * @example
+	 * <Tooltip trigger="click" content="This is a tooltip">
+	 *    <button>Hover me</button>
+	 * </Tooltip>
+	 */
+	trigger?: Trigger;
 	/**
 	 * Delay to show the tooltip.
 	 * @type {number}

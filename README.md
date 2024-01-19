@@ -67,6 +67,7 @@ export default App;
 | Name                 | Type     | Default | Description                                                  | Values                                                                                   |
 | -------------------- | -------- | ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
 | `placement`          | `string` | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right" |
+| `trigger`            | `string` | "hover" | The event that will trigger the tooltip.                     | "hover", "click"                                                                         |
 | `showDelay`          | `number` | 400     | The delay before the tooltip appears (in milliseconds).      | Any number                                                                               |
 | `hideDelay`          | `number` | 0       | The delay before the tooltip disappears (in milliseconds).   | Any number                                                                               |
 | `distanceFromTarget` | `number` | 30      | The distance between the tooltip and the anchor (in pixels). | Any number                                                                               |
@@ -133,14 +134,14 @@ You can override the default CSS variables by adding the following code to your 
 
 ```css
 :root {
-	--tooltip-text-color: #fff;
-	--tooltip-background-color: rgb(97 97 97 / 92%);
-	--tooltip-distance: 30px;
-	--tooltip-arrow-size: 6px;
-	--tooltip-padding: 6px;
-	--tooltip-animation-duration: 0.3s;
-	--tooltip-border-radius: 4px;
-	--tooltip-font-size: 11px;
+	--simtip-text-color: #fff;
+	--simtip-background-color: rgb(97 97 97 / 92%);
+	--simtip-distance: 30px;
+	--simtip-arrow-size: 6px;
+	--simtip-padding: 6px;
+	--simtip-animation-duration: 300ms;
+	--simtip-border-radius: 4px;
+	--simtip-font-size: 11px;
 }
 ```
 
@@ -175,9 +176,9 @@ export default App;
 - [x] Fix the position in HTML content tooltips.
 - [x] Check bundle size.
 - [x] Add more animations.
-- [ ] Add more positions (top-left, top-right, bottom-left, bottom-right).
+- [x] Add more positions (top-left, top-right, bottom-left, bottom-right).
 - [x] Add offset (distance between the tooltip and the anchor).
-- [ ] Add some trigger options (click, focus, etc.).
+- [x] Add some trigger options (click, focus, etc.).
 - [ ] Add some options to control the tooltip's size (width, height, etc.).
 - [x] Add more options to delay the tooltip's appearance and disappearance (enterDelay, leaveDelay, etc.)
 - [ ] Add tests.

@@ -6,6 +6,7 @@ import { TooltipProps } from "./Tooltip.types";
 export function Tooltip({
 	children,
 	content,
+	trigger,
 	placement,
 	showDelay,
 	hideDelay,
@@ -43,37 +44,41 @@ export function Tooltip({
 
 	return (
 		<div
+			data-testid="tooltip"
 			className={styles.tooltip_wrapper}
 			data-title={typeof content === "string" ? content : ""}
 			data-placement={placement}
 			aria-label={typeof content === "string" ? content : ""}
 			role="tooltip"
-			onMouseEnter={showTip}
-			onMouseLeave={hideTip}
+			onMouseEnter={!trigger || trigger === "hover" ? showTip : undefined}
+			onMouseLeave={!trigger || trigger === "hover" ? hideTip : undefined}
+			onClick={trigger === "click" ? showTip : undefined}
+			onBlur={trigger === "click" ? hideTip : undefined}
 		>
 			{children}
 			{active && (
 				<div
+					data-testid="tooltip-content"
 					className={`${className ? className : ""} ${styles.tooltip_text} ${
 						styles[`${placement ?? "top"}`]
 					} ${styles[`${animation ?? ""}`]} ${hasArrow ? styles.arrow : ""}`}
 					style={{
 						...((backgroundColor && {
-							"--tooltip-background-color": backgroundColor,
+							"--simtip-background-color": backgroundColor,
 						}) as React.CSSProperties),
-						...((color && { "--tooltip-text-color": color }) as React.CSSProperties),
-						...((arrowSize && { "--tooltip-arrow-size": `${arrowSize}px` }) as React.CSSProperties),
+						...((color && { "--simtip-text-color": color }) as React.CSSProperties),
+						...((arrowSize && { "--simtip-arrow-size": `${arrowSize}px` }) as React.CSSProperties),
 						...((distanceFromTarget && {
-							"--tooltip-distance": `${distanceFromTarget}px`,
+							"--simtip-distance": `${distanceFromTarget}px`,
 						}) as React.CSSProperties),
-						...((padding && { "--tooltip-padding": `${padding}px` }) as React.CSSProperties),
+						...((padding && { "--simtip-padding": `${padding}px` }) as React.CSSProperties),
 						...((animationDuration && {
-							"--tooltip-animation-duration": `${animationDuration}ms`,
+							"--simtip-animation-duration": `${animationDuration}ms`,
 						}) as React.CSSProperties),
 						...((borderRadius && {
-							"--tooltip-border-radius": `${borderRadius}px`,
+							"--simtip-border-radius": `${borderRadius}px`,
 						}) as React.CSSProperties),
-						...((fontSize && { "--tooltip-font-size": `${fontSize}px` }) as React.CSSProperties),
+						...((fontSize && { "--simtip-font-size": `${fontSize}px` }) as React.CSSProperties),
 					}}
 				>
 					{content}

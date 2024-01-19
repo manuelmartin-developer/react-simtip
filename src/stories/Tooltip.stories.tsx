@@ -33,6 +33,11 @@ const meta: Meta<typeof Tooltip> = {
 				"bottom-right",
 			],
 		},
+		trigger: {
+			description: "The trigger of the tooltip",
+			control: "select",
+			options: ["hover", "click"],
+		},
 		showDelay: {
 			description: "The delay of the tooltip",
 			control: {
@@ -110,6 +115,7 @@ const meta: Meta<typeof Tooltip> = {
 			include: [
 				"content",
 				"placement",
+				"trigger",
 				"showDelay",
 				"hideDelay",
 				"animation",
@@ -150,4 +156,72 @@ export const Default: Story = {
 		fontSize: 11,
 	},
 };
+
+export const Text: Story = {
+	args: {
+		children: (
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,{" "}
+				<Tooltip
+					content="Tooltip content"
+					backgroundColor="rgba(0, 0, 0, 0.8)"
+					color="#fff"
+					arrowSize={6}
+					distanceFromTarget={30}
+					padding={6}
+					borderRadius={10}
+					fontSize={12}
+					animation="flip"
+				>
+					<span
+						style={{
+							fontWeight: "bold",
+						}}
+					>
+						consequatur
+					</span>
+				</Tooltip>{" "}
+				voluptate. Quisquam,{" "}
+				<Tooltip
+					content="Tooltip content"
+					backgroundColor="rgba(125, 125, 125, 0.8)"
+					color="#fff"
+					arrowSize={6}
+					distanceFromTarget={30}
+					padding={6}
+					borderRadius={10}
+					fontSize={12}
+					animation="scale"
+					placement="bottom"
+				>
+					<span
+						style={{
+							fontWeight: "bold",
+						}}
+					>
+						consequatur
+					</span>
+				</Tooltip>{" "}
+				voluptate.
+			</p>
+		),
+		backgroundColor: "rgba(0, 0, 0, 0)",
+	},
+};
+
+export const Paragraph: Story = {
+	args: {
+		children: (
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, consequatur voluptate.
+			</p>
+		),
+		content: "Tooltip content",
+		placement: "top",
+		showDelay: 400,
+		animation: "slide-flip",
+		distanceFromTarget: 20,
+	},
+};
+
 Default.storyName = "Default";
