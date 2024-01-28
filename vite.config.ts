@@ -1,26 +1,30 @@
-import react from "@vitejs/plugin-react";
-import { resolve } from "path";
+/// <reference types="vitest" />
+
 import { defineConfig } from "vite";
-import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 import dts from "vite-plugin-dts";
+import { peerDependencies } from "./package.json";
+import react from "@vitejs/plugin-react";
+import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 
 export default defineConfig({
-	plugins: [react(), dts(), cssInjectedByJsPlugin()],
-	build: {
-		minify: true,
-		lib: {
-			entry: resolve(__dirname, "src/index.ts"),
-			formats: ["es", "umd"],
-			name: "react-simtip",
-			fileName: "react-simtip",
-		},
-		rollupOptions: {
-			external: ["react"],
-			output: {
-				globals: {
-					react: "React",
-				},
-			},
-		},
-	},
+  build: {
+    minify: true,
+    lib: {
+      entry: "./src/index.ts",
+      name: "vite-library-template",
+      fileName: (format) => `index.${format}.js`,
+      formats: ["cjs", "es"],
+    },
+    rollupOptions: {
+      external: [...Object.keys(peerDependencies)],
+    },
+    sourcemap: true,
+    emptyOutDir: true,
+  },
+  plugins: [react(), dts(), cssInjectedByJsPlugin()],
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "./setupTests.ts",
+  },
 });
