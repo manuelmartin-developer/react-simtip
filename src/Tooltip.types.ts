@@ -101,7 +101,7 @@ export interface TooltipProps {
   hasArrow?: boolean;
   /**
    * The animation of the tooltip.
-   * @type {"fade" | "scale" | "flip" | "slide" | "swing" | "bounce" "flicker"}
+   * @type {"fade" | "scale" | "flip" | "slide" | "swing" | "bounce" | "flicker"}
    * @optional
    * @default undefined
    * @example

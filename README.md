@@ -1,7 +1,5 @@
 ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-simtip?style=flat-square)](https://bundlephobia.com/package/react-simtip@latest) [![install size](https://packagephobia.com/badge?p=react-simtip)](https://packagephobia.com/result?p=react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
 
-# ⚠️ WARNING: This package is under development and is not ready for production use. ⚠️
-
 # react-simtip
 
 A simple tooltip component for React.
@@ -10,7 +8,7 @@ A simple tooltip component for React.
 
 ## Features
 
-- ⚡️ **Lightweight** (less than 1.6kb gzipped).
+- ⚡️ **Lightweight** (less than 2.3kb gzipped).
 - 📦 **No dependencies**.
 - 📝 **Written in TypeScript**.
 <!-- Test coverage -->
@@ -66,7 +64,7 @@ export default App;
 
 | Name                 | Type     | Default | Description                                                  | Values                                                                                   |
 | -------------------- | -------- | ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `placement`          | `string` | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right", "top-left", "top-right", "bottom-left", "bottom-right" |
+| `placement`          | `string` | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right" |
 | `trigger`            | `string` | "hover" | The event that will trigger the tooltip.                     | "hover", "click"                                                                         |
 | `showDelay`          | `number` | 400     | The delay before the tooltip appears (in milliseconds).      | Any number                                                                               |
 | `hideDelay`          | `number` | 0       | The delay before the tooltip disappears (in milliseconds).   | Any number                                                                               |
@@ -134,10 +132,6 @@ You can override the default CSS variables by adding the following code to your 
 
 ```css
 :root {
-	--simtip-text-color: #fff;
-	--simtip-background-color: rgb(97 97 97 / 92%);
-	--simtip-distance: 30px;
-	--simtip-arrow-size: 6px;
 	--simtip-padding: 6px;
 	--simtip-animation-duration: 300ms;
 	--simtip-border-radius: 4px;
@@ -170,20 +164,6 @@ const App = () => {
 
 export default App;
 ```
-
-<!-- ## TODO
-
-- [x] Fix the position in HTML content tooltips.
-- [x] Check bundle size.
-- [x] Add more animations.
-- [x] Add more positions (top-left, top-right, bottom-left, bottom-right).
-- [x] Add offset (distance between the tooltip and the anchor).
-- [x] Add some trigger options (click, focus, etc.).
-- [ ] Add some options to control the tooltip's size (width, height, etc.).
-- [x] Add more options to delay the tooltip's appearance and disappearance (enterDelay, leaveDelay, etc.)
-- [ ] Add tests.
-- [x] Add more customization options (colors, sizes, etc.).
-- [ ] Add more examples. -->
 
 ## License
 
