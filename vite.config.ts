@@ -13,10 +13,14 @@ export default defineConfig({
       entry: "./src/index.ts",
       name: "vite-library-template",
       fileName: (format) => `index.${format}.js`,
-      formats: ["cjs", "es"],
+      formats: ["es"],
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
+      input: {
+        Tooltip: "./src/Tooltip.tsx",
+        TooltipProps: "./src/Tooltip.types.ts",
+      },
     },
     sourcemap: true,
     emptyOutDir: true,
