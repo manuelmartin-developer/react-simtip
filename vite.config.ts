@@ -17,10 +17,6 @@ export default defineConfig({
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
-      input: {
-        Tooltip: "./src/Tooltip.tsx",
-        TooltipProps: "./src/Tooltip.types.ts",
-      },
     },
     sourcemap: true,
     emptyOutDir: true,
