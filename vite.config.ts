@@ -11,12 +11,18 @@ export default defineConfig({
     minify: true,
     lib: {
       entry: "./src/index.ts",
-      name: "vite-library-template",
+      name: "react-simtip",
       fileName: (format) => `index.${format}.js`,
-      formats: ["es"],
+      formats: ["cjs", "es"],
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
+      output: {
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+      },
     },
     sourcemap: true,
     emptyOutDir: true,
