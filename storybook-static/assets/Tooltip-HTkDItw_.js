@@ -1,4 +1,4 @@
-import{j as n,T as s,D as r}from"./Tooltip.stories-o4Nc14tK.js";import{M as l,C as h}from"./index-1rg4IYo2.js";import{useMDXComponents as i}from"./index-RF8qTkjN.js";import"./index-FaLGlFNx.js";import"./_commonjsHelpers-4gQjN7DL.js";import"./extends-dGVwEr9R.js";import"./index-gMreU1aJ.js";import"./iframe-qSmAq-N0.js";import"../sb-preview/runtime.js";import"./index-ogXoivrg.js";import"./index-MVbLLYTZ.js";import"./index-PPLHz8o0.js";function o(e){const t=Object.assign({h1:"h1",p:"p",h4:"h4",h2:"h2",pre:"pre",code:"code",ul:"ul",li:"li",strong:"strong"},i(),e.components);return n.jsxs(n.Fragment,{children:[n.jsx(l,{of:s,title:"Tooltip"}),`
+import{j as n,T as s,D as r}from"./Tooltip.stories-yUPEyMl_.js";import{M as l,C as h}from"./index-GmJOn0i1.js";import{useMDXComponents as i}from"./index-RF8qTkjN.js";import"./index-FaLGlFNx.js";import"./_commonjsHelpers-4gQjN7DL.js";import"./extends-dGVwEr9R.js";import"./index-gMreU1aJ.js";import"./iframe-JMZz6SKf.js";import"../sb-preview/runtime.js";import"./index-ogXoivrg.js";import"./index-MVbLLYTZ.js";import"./index-PPLHz8o0.js";function o(e){const t=Object.assign({h1:"h1",p:"p",h4:"h4",h2:"h2",pre:"pre",code:"code",ul:"ul",li:"li",strong:"strong"},i(),e.components);return n.jsxs(n.Fragment,{children:[n.jsx(l,{of:s,title:"Tooltip"}),`
 `,n.jsx(t.h1,{id:"tooltip",children:"Tooltip"}),`
 `,n.jsx(t.p,{children:"A tooltip component."}),`
 `,n.jsx(t.h4,{id:"example",children:"Example"}),`
@@ -35,4 +35,5 @@ offset - string - The offset of the tooltip.`]}),`
 `,n.jsxs(t.li,{children:[n.jsx(t.strong,{children:"padding"})," - string - The padding of the tooltip."]}),`
 `,n.jsxs(t.li,{children:[n.jsx(t.strong,{children:"borderRadius"})," - string - The border radius of the tooltip."]}),`
 `,n.jsxs(t.li,{children:[n.jsx(t.strong,{children:"fontSize"})," - string - The font size of the tooltip."]}),`
+`,n.jsxs(t.li,{children:[n.jsx(t.strong,{children:"maxWidth"})," - number - The maximum width of the tooltip in pixels."]}),`
 `]})]})}function w(e={}){const{wrapper:t}=Object.assign({},i(),e.components);return t?n.jsx(t,Object.assign({},e,{children:n.jsx(o,e)})):o(e)}export{w as default};
