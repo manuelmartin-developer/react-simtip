@@ -28,6 +28,7 @@ const Tooltip = ({
   fontSize,
   variant = "dark",
   open,
+  maxWidth,
 }: TooltipProps) => {
   return (
     <TooltipProvider
@@ -62,6 +63,9 @@ const Tooltip = ({
               }) as React.CSSProperties),
               ...((fontSize && {
                 "--simtip-font-size": `${fontSize}px`,
+              }) as React.CSSProperties),
+              ...((maxWidth && {
+                "--simtip-max-width": `${maxWidth}px`,
               }) as React.CSSProperties),
             }}
           >

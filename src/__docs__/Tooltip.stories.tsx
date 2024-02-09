@@ -101,6 +101,12 @@ const meta: Meta<typeof Tooltip> = {
       control: "select",
       options: ["dark", "light", "error", "warning", "success", "info"],
     },
+    maxWidth: {
+      description: "The max width of the tooltip in pixels",
+      control: {
+        type: "number",
+      },
+    },
   },
   parameters: {
     controls: {
@@ -119,6 +125,7 @@ const meta: Meta<typeof Tooltip> = {
         "borderRadius",
         "fontSize",
         "variant",
+        "maxWidth",
       ],
     },
     layout: "centered",
