@@ -200,4 +200,15 @@ export interface TooltipProps {
    * </Tooltip>
    * */
   open?: boolean;
+  /**
+   * The max width of the tooltip.
+   * @type {number}
+   * @optional
+   * @default 300
+   * @example
+   * <Tooltip maxWidth={500} content="This is a tooltip">
+   * <button>Hover me</button>
+   * </Tooltip>
+   * */
+  maxWidth?: number;
 }
