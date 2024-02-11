@@ -31,7 +31,7 @@ jobs:
       - name: 🧪 Unit Tests
         run: npm run test
 
-      - name: 🎭 E2E Prepate
+      - name: 🎭 E2E Prepare
         run: npx playwright install --with-deps
 
       - name: 🎭 E2E Tests
