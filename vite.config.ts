@@ -1,6 +1,7 @@
 /// <reference types="vitest" />
 
 import { defineConfig } from "vite";
+import { configDefaults } from "vitest/config";
 import dts from "vite-plugin-dts";
 import { peerDependencies } from "./package.json";
 import react from "@vitejs/plugin-react";
@@ -31,6 +32,6 @@ export default defineConfig({
   test: {
     globals: true,
     environment: "jsdom",
-    setupFiles: "./setupTests.ts",
+    exclude: [...configDefaults.exclude, "src/__e2e__/**"],
   },
 });

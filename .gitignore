@@ -10,3 +10,7 @@ node_modules/
 
 # Build output
 dist
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

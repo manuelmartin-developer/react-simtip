@@ -2,7 +2,7 @@
   // Specify the environments where the code will run
   "env": {
     "jest": true, // Enable Jest for testing
-    "browser": true // Enable browser environment
+    "browser": true, // Enable browser environment
   },
 
   // Stop ESLint from searching for configuration in parent folders
@@ -23,14 +23,14 @@
     "prettier", // Prettier rules
     "plugin:prettier/recommended", // Prettier plugin integration
     "plugin:react-hooks/recommended", // Recommended rules for React hooks
-    "plugin:storybook/recommended" // Recommended rules for Storybook
+    "plugin:storybook/recommended", // Recommended rules for Storybook
   ],
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
   },
   "settings": {
     "react": {
-      "version": "detect" // Automatically detect React version
-    }
-  }
+      "version": "detect", // Automatically detect React version
+    },
+  },
 }
