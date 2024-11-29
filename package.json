@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/manuelmartin-developer/react-simtip"
+    "url": "git+https://github.com/manuelmartin-developer/react-simtip.git"
   },
   "bugs": {
     "url": "https://github.com/manuelmartin-developer/react-simtip/issues"
