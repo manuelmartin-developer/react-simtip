@@ -2,7 +2,7 @@
   "name": "react-simtip",
   "author": "Manuel Martín",
   "description": "A simple tooltip component for React",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "license": "MIT",
   "keywords": [
     "react",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://react-simtip.manuelmartin.dev/",
   "type": "module",
-  "main": ",/dist/index.cjs.js",
+  "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "files": [

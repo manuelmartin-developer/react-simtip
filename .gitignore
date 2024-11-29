@@ -14,3 +14,6 @@ dist
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# OS or editor temporary files
+.DS_Store
