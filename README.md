@@ -1,8 +1,9 @@
 ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-simtip?style=flat-square)](https://bundlephobia.com/package/react-simtip@latest) [![install size](https://packagephobia.com/badge?p=react-simtip)](https://packagephobia.com/result?p=react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
 
 <!-- Logo -->
-
-![Simtip logo](/public/assets/img/logo.png "React Simtip"){ style="display: block; margin: 0 auto"}
+<p align="center">
+<img src="/public/assets/img/logo.png" alt="Simtip logo" />
+</p>
 
 # react-simtip
 
