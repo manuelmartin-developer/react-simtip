@@ -1,5 +1,9 @@
 ![typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label) [![npm](https://img.shields.io/npm/v/react-simtip.svg)](https://www.npmjs.com/package/react-simtip) [![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-simtip?style=flat-square)](https://bundlephobia.com/package/react-simtip@latest) [![install size](https://packagephobia.com/badge?p=react-simtip)](https://packagephobia.com/result?p=react-simtip) [![npm downloads](https://img.shields.io/npm/dm/react-simtip.svg?style=flat-square)](https://npm-stat.com/charts.html?package=react-simtip)
 
+<!-- Logo -->
+
+![Simtip logo](/public/assets/img/logo.png "React Simtip"){ style="display: block; margin: 0 auto"}
+
 # react-simtip
 
 A simple tooltip component for React.
@@ -18,7 +22,7 @@ A simple tooltip component for React.
 
 ## Storybook
 
-You can see the component in action in the [Storybook](https://react-simtip.manuelmartin.dev/).
+You can see the component in action and docs in the [Storybook](https://react-simtip.manuelmartin.dev/).
 
 ## Installation
 
@@ -39,127 +43,11 @@ import React from "react";
 import { Tooltip } from "react-simtip";
 
 const App = () => {
-	return (
-		<Tooltip content="Hello World!">
-			<button>Hover me!</button>
-		</Tooltip>
-	);
-};
-
-export default App;
-```
-
-## Props
-
-### Required
-
-| Name       | Type                    | Default | Description                                |
-| ---------- | ----------------------- | ------- | ------------------------------------------ |
-| `content`  | `string` or `ReactNode` | null    | The content of the tooltip.                |
-| `children` | `ReactNode`             | null    | The element that will trigger the tooltip. |
-
-### Optional
-
-#### Position
-
-| Name                 | Type     | Default | Description                                                  | Values                                                                                   |
-| -------------------- | -------- | ------- | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| `placement`          | `string` | "top"   | The position of the tooltip.                                 | "top", "bottom", "left", "right" |
-| `trigger`            | `string` | "hover" | The event that will trigger the tooltip.                     | "hover", "click"                                                                         |
-| `showDelay`          | `number` | 400     | The delay before the tooltip appears (in milliseconds).      | Any number                                                                               |
-| `hideDelay`          | `number` | 0       | The delay before the tooltip disappears (in milliseconds).   | Any number                                                                               |
-| `distanceFromTarget` | `number` | 30      | The distance between the tooltip and the anchor (in pixels). | Any number                                                                               |
-
-#### Appearance
-
-| Name              | Type      | Default | Description                                   | Values                  |
-| ----------------- | --------- | ------- | --------------------------------------------- | ----------------------- |
-| `fontSize`        | `string`  | "1rem"  | The font size of the tooltip.                 | Any valid CSS font size |
-| `padding`         | `number`  | 6       | The padding of the tooltip (in pixels).       | Any number              |
-| `borderRadius`    | `number`  | 4       | The border radius of the tooltip (in pixels). | Any number              |
-| `backgroundColor` | `string`  | "#000"  | The background color of the tooltip.          | Any valid CSS color     |
-| `color`           | `string`  | "#fff"  | The text color of the tooltip.                | Any valid CSS color     |
-| `hasArrow`        | `boolean` | false   | Whether the tooltip has an arrow or not.      | true, false             |
-| `arrowSize`       | `number`  | 6       | The size of the arrow (in pixels).            | Any number              |
-
-#### Animation
-
-| Name                | Type     | Default | Description                                      | Values                                                   |
-| ------------------- | -------- | ------- | ------------------------------------------------ | -------------------------------------------------------- |
-| `animation`         | `string` | "fade"  | The animation of the tooltip.                    | "fade", "scale", "flip", "slide", "slide-flip", "bounce" |
-| `animationDuration` | `number` | 300     | The duration of the animation (in milliseconds). | Any number                                               |
-
-#### Classes
-
-| Name        | Type     | Default | Description                    | Values                   |
-| ----------- | -------- | ------- | ------------------------------ | ------------------------ |
-| `className` | `string` | null    | The class name of the tooltip. | Any valid CSS class name |
-
-## Styling
-
-There are three ways to style the tooltip:
-
-### 1. Using the `className` prop
-
-```jsx
-import React from "react";
-import { Tooltip } from "react-simtip";
-
-const App = () => {
-	return (
-		<Tooltip content="Hello World!" className="my-tooltip">
-			<button>Hover me!</button>
-		</Tooltip>
-	);
-};
-
-export default App;
-```
-
-```css
-.my-tooltip {
-	background-color: #000;
-	color: #fff;
-	font-size: 1rem;
-	padding: 6px;
-	border-radius: 4px;
-}
-```
-
-### 2. Using the provided CSS variables
-
-You can override the default CSS variables by adding the following code to your CSS file (**This is the easiest way to apply same styles to all the tooltips**):
-
-```css
-:root {
-	--simtip-padding: 6px;
-	--simtip-animation-duration: 300ms;
-	--simtip-border-radius: 4px;
-	--simtip-font-size: 11px;
-}
-```
-
-### 3. Using provided props
-
-This way styles will be applied only to the tooltip that has the prop.
-
-```jsx
-import React from "react";
-import { Tooltip } from "react-simtip";
-
-const App = () => {
-	return (
-		<Tooltip
-			content="Hello World!"
-			backgroundColor="#000"
-			color="#fff"
-			fontSize="1rem"
-			padding={6}
-			borderRadius={4}
-		>
-			<button>Hover me!</button>
-		</Tooltip>
-	);
+  return (
+    <Tooltip content="Hello World!">
+      <button>Hover me!</button>
+    </Tooltip>
+  );
 };
 
 export default App;
