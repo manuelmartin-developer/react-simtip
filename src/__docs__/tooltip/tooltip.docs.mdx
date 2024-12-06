@@ -1,0 +1,1119 @@
+import {
+  ColorItem,
+  ColorPalette,
+  Markdown,
+  Meta,
+  Story,
+  Title,
+} from "@storybook/blocks";
+
+import * as TooltipStories from "./tooltip.stories.tsx";
+import Tooltip from "../../Tooltip.tsx";
+
+<Meta of={TooltipStories} />
+
+<Story of={TooltipStories.Welcome} />
+
+React SimTip is a simple tooltip component that can be used to display additional information when a user hovers over an element. The tooltip component is highly customizable and can be used to display text, images, or any other content.
+
+## Installation
+
+To install the tooltip component, run the following command:
+
+```bash
+npm install react-simtip
+```
+
+## Usage
+
+To use the tooltip component, import it into your project and add it to your component. Here is an example of how to use the tooltip component:
+
+```jsx
+import React from "react";
+import Tooltip from "react-simtip";
+
+const App = () => {
+  return (
+    <Tooltip content="👋 Hi there!">
+      <button>Hover over me</button>
+    </Tooltip>
+  );
+};
+
+export default App;
+```
+
+## Props
+
+The tooltip component accepts the following props:
+
+<Markdown>
+  {`
+| Prop Name       | Type     | Default Value | Description |
+| --------------- | -------- | ------------- | ----------- |
+| animation       | enum     | undefined     | The animation to use when showing the tooltip. Possible values are "fade", "scale", "flip", "slide", "swing", "bounce" and "flicker". |
+| animationDuration | number | 300ms           | The duration of the animation in milliseconds. |
+| backgroundColor | string   | rgb(97 97 97 / 92%)       | The background color of the tooltip. |
+| borderRadius    | number   | 4           | The border radius of the tooltip in pixels. |
+| className       | string   | undefined   | The class name of the tooltip. |
+| color          | string   | #fff        | The text color of the tooltip. |
+| content        | string or JSX element | undefined | The content to display in the tooltip. |
+| disableInteractive | boolean | false     | Whether the tooltip should be interactive. |
+| fontSize       | string   | 11px        | The font size of the tooltip. |
+| hasArrow       | boolean  | false        | Whether the tooltip should have an arrow. |
+| maxWidth       | number   | 300px       | The maximum width of the tooltip in pixels. |
+| offset         | number   | 8          | The offset of the tooltip from the target element in pixels. |
+| open           | boolean  | false       | Whether the tooltip is open. |
+| padding        | number   | 6          | The padding of the tooltip in pixels. |
+| placement      | enum     | top         | The placement of the tooltip relative to the target element. Possible values are "top", "right", "bottom", and "left". |
+| showDelay      | number   | 100ms          | The delay in milliseconds before showing the tooltip. |
+| variant        | enum     | dark        | The variant of the tooltip. Possible values are "light", "dark", "error", "warning", "info", and "success". |
+`}
+</Markdown>
+
+<br />
+<hr />
+<br />
+
+### `animation`
+
+The animation prop is used to specify the animation that will be used when showing the tooltip. The possible values are "fade", "scale", "flip", "slide", "swing", "bounce", and "flicker".
+
+```jsx
+<Tooltip content="👋 Hi there!" animation="fade">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" animation="fade">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Fade</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="scale">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Scale</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="flip">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Flip</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="slide">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Slide</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="swing">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Swing</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="bounce">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Bounce</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="flicker">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Flicker</span>
+  </Tooltip>
+</div>
+
+<br />
+### `animationDuration`
+
+The animationDuration prop is used to specify the duration of the animation in milliseconds.
+
+```jsx
+<Tooltip content="👋 Hi there!" animation="flicker" animationDuration={500}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" animation="flicker" animationDuration={500}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >500ms</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="flicker" animationDuration={1000}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >1000ms</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" animation="flicker" animationDuration={1500}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >1500ms</span>
+  </Tooltip>
+</div>
+
+<br />
+### `backgroundColor`
+
+The backgroundColor prop is used to specify the background color of the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" backgroundColor="red">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" backgroundColor="red">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Red</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" backgroundColor="blue">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Blue</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" backgroundColor="green">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Green</span>
+  </Tooltip>
+</div>
+
+<br />
+### `borderRadius`
+
+The borderRadius prop is used to specify the border radius of the tooltip in pixels.
+
+```jsx
+<Tooltip content="👋 Hi there!" borderRadius={8}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" borderRadius={0}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >0px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" borderRadius={8}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >8px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" borderRadius={24}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >24px</span>
+  </Tooltip>
+</div>
+
+<br />
+### `className`
+
+The className prop is used to specify the class name of the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" className="my-tooltip">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+```css
+.my-tooltip {
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  max-width: 200px;
+  padding: 12px;
+}
+```
+
+<br />
+### `color`
+
+The color prop is used to specify the text color of the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" color="red">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" color="red" backgroundColor="lightgray">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Red</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" color="blue" backgroundColor="lightgray">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Blue</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" color="green" backgroundColor="lightgray">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Green</span>
+  </Tooltip>
+</div>
+
+<br />
+### `content`
+
+The content prop is used to specify the content that will be displayed in the tooltip. The content can be a string, JSX element, or any other valid React element.
+
+```jsx
+<Tooltip content="👋 Hi there!">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Some text</span>
+  </Tooltip>
+  <Tooltip
+    content={
+      <img
+        fetchpriority="high"
+        src="/assets/img/logo.png"
+        alt="placeholder"
+        style={{
+          width: "150px",
+          height: "auto",
+        }}
+      />
+    }
+    backgroundColor="transparent"
+  >
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >A image</span>
+  </Tooltip>
+  <Tooltip
+    content={
+      <div>
+        <h1>Heading</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+    }
+    padding={10}
+  >
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >HTML content</span>
+  </Tooltip>
+</div>
+
+<br />
+### `disableInteractive`
+
+The disableInteractive prop is used to specify whether the tooltip should be interactive. If set to true, the tooltip will not be interactive and will not be able to receive focus or be clicked.
+
+```jsx
+<Tooltip content="👋 Hi there!" disableInteractive>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" disableInteractive>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Disable Interactive</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Enable Interactive</span>
+  </Tooltip>
+</div>
+
+<br />
+### `fontSize`
+
+The fontSize prop is used to specify the font size of the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" fontSize={16}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" fontSize={12}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >12px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" fontSize={16}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >16px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" fontSize={20}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >20px</span>
+  </Tooltip>
+</div>
+
+<br />
+### `hasArrow`
+
+The hasArrow prop is used to specify whether the tooltip should have an arrow.
+
+```jsx
+<Tooltip content="👋 Hi there!" hasArrow>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" hasArrow>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Has Arrow</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >No Arrow</span>
+  </Tooltip>
+</div>
+
+<br />
+### `maxWidth`
+
+The maxWidth prop is used to specify the maximum width of the tooltip in pixels.
+
+```jsx
+<Tooltip content="👋 Hi there!" maxWidth={200}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    maxWidth={200}
+  >
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >200px</span>
+  </Tooltip>
+  <Tooltip
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    maxWidth={300}
+  >
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >300px</span>
+  </Tooltip>
+  <Tooltip
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    maxWidth={400}
+  >
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >400px</span>
+  </Tooltip>
+</div>
+
+<br />
+### `offset`
+
+The offset prop is used to specify the offset of the tooltip from the target element in pixels.
+
+```jsx
+<Tooltip content="👋 Hi there!" offset={16}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" offset={8}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >8px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" offset={16}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >16px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" offset={24}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >24px</span>
+  </Tooltip>
+</div>
+
+<br />
+### `open`
+
+The open prop is used to specify whether the tooltip is open.
+
+```jsx
+<Tooltip content="👋 Hi there!" open>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" open>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Open</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Closed</span>
+  </Tooltip>
+</div>
+
+<br />
+### `padding`
+
+The padding prop is used to specify the padding of the tooltip in pixels.
+
+```jsx
+<Tooltip content="👋 Hi there!" padding={12}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" padding={6}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >6px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" padding={12}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >12px</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" padding={18}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >18px</span>
+  </Tooltip>
+</div>
+
+<br />
+### `placement`
+
+The placement prop is used to specify the placement of the tooltip relative to the target element. The possible values are "top", "right", "bottom", and "left".
+
+```jsx
+<Tooltip content="👋 Hi there!" placement="right">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" placement="top">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Top</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" placement="right">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Right</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" placement="bottom">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Bottom</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" placement="left">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Left</span>
+  </Tooltip>
+</div>
+
+<br />
+### `showDelay`
+
+The showDelay prop is used to specify the delay in milliseconds before showing the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" showDelay={200}>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" showDelay={100}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >100ms</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" showDelay={200}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >200ms</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" showDelay={300}>
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >300ms</span>
+  </Tooltip>
+</div>
+
+<br />
+### `variant`
+
+The variant prop is used to specify the variant of the tooltip. The possible values are "light", "dark", "error", "warning", "info", and "success".
+
+```jsx
+<Tooltip content="👋 Hi there!" variant="error">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" variant="light">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Light</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" variant="dark">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Dark</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" variant="error">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Error</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" variant="warning">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Warning</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" variant="info">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Info</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" variant="success">
+    <span
+      style={{
+        padding: "0.5rem",
+        cursor: "pointer",
+        borderRadius: "4px",
+        backgroundColor: "rgb(39 125 161 / 92%)",
+        color: "#fff",
+      }}
+    >Success</span>
+  </Tooltip>
+</div>
+<br />
+<br />
+## Styling
+
+The tooltip component can be styled in several ways:
+
+### With provided props
+
+The mentioned props can be used to style the tooltip component.
+
+If you want to style a **specific** tooltip, this way is the best.
+
+```jsx
+<Tooltip
+  content="👋 Hi there!"
+  backgroundColor="red"
+  borderRadius={8}
+  color="white"
+  fontSize={16}
+  hasArrow
+  maxWidth={200}
+  offset={16}
+  padding={12}
+  placement="right"
+  variant="error"
+>
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+### With CSS classes
+
+This is the way to style **several** tooltips at once.
+
+```css
+.my-tooltip {
+  background-color: red;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  max-width: 200px;
+  padding: 12px;
+}
+```
+
+```jsx
+<Tooltip content="👋 Hi there!" className="my-tooltip">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+### With CSS variables
+
+This is the way to style **all** tooltips at once.
+
+```css
+:root {
+  --simtip-background-color: red;
+  --simtip-text-color: white;
+  --simtip-border-radius: 8px;
+  --simtip-color: white;
+  --simtip-font-size: 16px;
+  --simtip-max-width: 200px;
+  --simtip-padding: 12px;
+  --simtip-animation-duration: 300ms;
+}
+```

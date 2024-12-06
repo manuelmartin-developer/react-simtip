@@ -6,18 +6,17 @@ import {
   TooltipArrow,
   Root,
 } from "@radix-ui/react-tooltip";
-
-import styles from "./Tooltip.module.scss";
+import "./Tooltip.css";
 import { TooltipProps } from "./Tooltip.types";
 
 const Tooltip = ({
   children,
   content,
-  showDelay = 400,
+  showDelay = 100,
   disableInteractive,
   className,
   placement,
-  offset,
+  offset = 8,
   hasArrow = false,
   animation,
   animationDuration,
@@ -26,7 +25,7 @@ const Tooltip = ({
   padding,
   borderRadius,
   fontSize,
-  variant = "dark",
+  variant,
   open,
   maxWidth,
 }: TooltipProps) => {
@@ -42,9 +41,9 @@ const Tooltip = ({
             side={placement}
             data-testid="tooltip"
             sideOffset={offset}
-            className={`${styles.tooltip_wrapper} ${className ?? className} ${
-              animation ? styles[`${animation}`] : ""
-            } ${styles[`${variant}`]}`}
+            className={`tooltip_wrapper ${className ?? className} ${
+              animation ? `${animation}` : ""
+            } ${`${variant}`}`}
             style={{
               ...((backgroundColor && {
                 "--simtip-background-color": backgroundColor,
@@ -52,25 +51,28 @@ const Tooltip = ({
               ...((color && {
                 "--simtip-text-color": color,
               }) as React.CSSProperties),
-              ...((padding && {
-                "--simtip-padding": `${padding}px`,
-              }) as React.CSSProperties),
+              ...((typeof padding === "number" &&
+                padding !== undefined && {
+                  "--simtip-padding": `${padding}px`,
+                }) as unknown as React.CSSProperties),
               ...((animationDuration && {
                 "--simtip-animation-duration": `${animationDuration}ms`,
               }) as React.CSSProperties),
-              ...((borderRadius && {
-                "--simtip-border-radius": `${borderRadius}px`,
-              }) as React.CSSProperties),
+              ...((typeof borderRadius === "number" &&
+                borderRadius !== undefined && {
+                  "--simtip-border-radius": `${borderRadius}px`,
+                }) as unknown as React.CSSProperties),
               ...((fontSize && {
                 "--simtip-font-size": `${fontSize}px`,
               }) as React.CSSProperties),
               ...((maxWidth && {
                 "--simtip-max-width": `${maxWidth}px`,
               }) as React.CSSProperties),
+              zIndex: 9999,
             }}
           >
             {content}
-            {hasArrow && <TooltipArrow className={styles.tooltip_arrow} />}
+            {hasArrow && <TooltipArrow className="tooltip_arrow" />}
           </TooltipContent>
         </TooltipPortal>
       </Root>
@@ -78,4 +80,4 @@ const Tooltip = ({
   );
 };
 
-export { Tooltip };
+export default Tooltip;

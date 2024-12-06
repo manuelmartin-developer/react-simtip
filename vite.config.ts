@@ -10,6 +10,7 @@ import cssInjectedByJsPlugin from "vite-plugin-css-injected-by-js";
 export default defineConfig({
   build: {
     minify: true,
+    copyPublicDir: false,
     lib: {
       entry: "./src/index.ts",
       name: "react-simtip",
@@ -25,7 +26,7 @@ export default defineConfig({
         },
       },
     },
-    sourcemap: true,
+    sourcemap: false,
     emptyOutDir: true,
   },
   plugins: [react(), dts(), cssInjectedByJsPlugin()],
