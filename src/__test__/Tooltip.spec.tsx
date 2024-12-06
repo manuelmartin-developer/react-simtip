@@ -2,7 +2,7 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
-import { Tooltip } from "../Tooltip";
+import Tooltip from "../Tooltip";
 
 class ResizeObserver {
   observe() {}
