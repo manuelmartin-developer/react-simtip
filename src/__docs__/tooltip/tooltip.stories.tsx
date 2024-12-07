@@ -226,6 +226,7 @@ export const Welcome: StoryObj<TooltipProps> = () => {
         backgroundColor="rgba(39, 125, 161, 0.92)"
         color="white"
         animation="bounce"
+        hasArrow
       >
         <span
           style={{

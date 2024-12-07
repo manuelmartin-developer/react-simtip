@@ -20,7 +20,6 @@ export default defineConfig({
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
       output: {
-        preserveModules: true,
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
