@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [2.2.2] - 2024-12-07
+
+### Fixed
+
+- Reduced bundle size
+
+## [2.2.1] - 2024-12-06
+
+### Changed
+
+- Readme file updated
+
 ## [2.2.0] - 2024-11-30
 
 ### Added
