@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [2.2.4] - 2024-12-25 🎄
+
+### Fixed
+
+- Default and fallback CSS variables.
+
 ## [2.2.3] - 2024-12-07
 
 ### Fixed
