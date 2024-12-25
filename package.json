@@ -2,7 +2,7 @@
   "name": "react-simtip",
   "author": "Manuel Martín",
   "description": "A simple tooltip component for React",
-  "version": "2.2.3",
+  "version": "2.2.4",
   "license": "MIT",
   "keywords": [
     "react",

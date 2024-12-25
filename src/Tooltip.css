@@ -1,22 +1,28 @@
 :root {
-  --simtip-padding: 6px;
-  --simtip-animation-duration: 300ms;
-  --simtip-border-radius: 4px;
-  --simtip-font-size: 11px;
-  --simtip-max-width: 300px;
-  --simtip-text-color: #fff;
-  --simtip-background-color: rgb(97 97 97 / 92%);
+  --simtip-default-padding: 6px;
+  --simtip-default-animation-duration: 300ms;
+  --simtip-default-border-radius: 4px;
+  --simtip-default-font-size: 11px;
+  --simtip-default-max-width: 300px;
+  --simtip-default-text-color: #fff;
+  --simtip-default-background-color: rgb(97 97 97 / 92%);
 }
 
 .tooltip_wrapper {
-  background-color: var(--simtip-background-color);
-  border-radius: var(--simtip-border-radius);
-  color: var(--simtip-text-color);
+  background-color: var(
+    --simtip-background-color,
+    var(--simtip-default-background-color)
+  );
+  border-radius: var(
+    --simtip-border-radius,
+    var(--simtip-default-border-radius)
+  );
+  color: var(--simtip-text-color, var(--simtip-default-text-color));
   display: inline-block;
   font-family: inherit;
-  font-size: var(--simtip-font-size);
-  max-width: var(--simtip-max-width);
-  padding: var(--simtip-padding);
+  font-size: var(--simtip-font-size, var(--simtip-default-font-size));
+  max-width: var(--simtip-max-width, var(--simtip-default-max-width));
+  padding: var(--simtip-padding, var(--simtip-default-padding));
   position: relative;
 }
 
@@ -51,53 +57,70 @@
 }
 
 .tooltip_wrapper.fade {
-  -webkit-animation: fade var(--simtip-animation-duration)
+  -webkit-animation: fade
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade var(--simtip-animation-duration)
+  animation: fade
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .tooltip_wrapper.scale {
-  -webkit-animation: scale var(--simtip-animation-duration)
+  -webkit-animation: scale
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: scale var(--simtip-animation-duration)
+  animation: scale
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.flip {
-  -webkit-animation: flip var(--simtip-animation-duration)
+  -webkit-animation: flip
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: flip var(--simtip-animation-duration)
+  animation: flip
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.slide {
-  -webkit-animation: slide var(--simtip-animation-duration)
+  -webkit-animation: slide
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide var(--simtip-animation-duration)
+  animation: slide
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.swing {
-  -webkit-animation: swing var(--simtip-animation-duration)
+  -webkit-animation: swing
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
-  animation: swing var(--simtip-animation-duration)
+  animation: swing
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 .tooltip_wrapper.bounce {
-  -webkit-animation: bounce forwards var(--simtip-animation-duration)
+  -webkit-animation: bounce forwards
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     ease-in-out;
-  animation: bounce forwards var(--simtip-animation-duration) ease-in-out;
+  animation: bounce forwards
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
+    ease-in-out;
 }
 
 .tooltip_wrapper.flicker {
-  -webkit-animation: flicker var(--simtip-animation-duration) linear both;
-  animation: flicker var(--simtip-animation-duration) linear both;
+  -webkit-animation: flicker
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
+    linear both;
+  animation: flicker
+    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
+    linear both;
 }
 
 .tooltip_arrow {
-  fill: var(--simtip-background-color);
+  fill: var(--simtip-background-color, var(--simtip-default-background-color));
 }
 
 /* Animations */
