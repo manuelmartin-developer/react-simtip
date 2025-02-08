@@ -41,7 +41,7 @@ const Tooltip = ({
             side={placement}
             data-testid="tooltip"
             sideOffset={offset}
-            className={`tooltip_wrapper ${className ?? className} ${
+            className={`tooltip_wrapper ${className ?? ""} ${
               animation ? `${animation}` : ""
             } ${`${variant}`}`}
             style={{

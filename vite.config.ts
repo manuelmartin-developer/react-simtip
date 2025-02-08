@@ -15,7 +15,7 @@ export default defineConfig({
       entry: "./src/index.ts",
       name: "react-simtip",
       fileName: (format) => `index.${format}.js`,
-      formats: ["cjs", "es"],
+      formats: ["es"],
     },
     rollupOptions: {
       external: [...Object.keys(peerDependencies)],
