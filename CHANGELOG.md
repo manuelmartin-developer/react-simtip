@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [3.0.0] - 2025-02-08
+
+### Changed
+
+- **Breaking changes**: Only "ES" modules are exported. CommonJS modules are no longer supported.
+
 ## [2.2.4] - 2024-12-25 🎄
 
 ### Fixed
