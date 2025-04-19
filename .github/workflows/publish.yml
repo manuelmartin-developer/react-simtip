@@ -49,8 +49,10 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - name: 📥 Install Dependencies
-        run: npm install
+      - name: 📥 Clean and Install Dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: 🛠️ Build
         run: npm run build
