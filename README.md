@@ -42,7 +42,7 @@ yarn add react-simtip
 
 ```jsx
 import React from "react";
-import { Tooltip } from "react-simtip";
+import Tooltip from "react-simtip";
 
 const App = () => {
   return (

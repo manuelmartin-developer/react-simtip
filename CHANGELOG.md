@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [3.1.0] - 2025-04-19
+
+### Added
+
+- New CSS variables for tooltip border and box shadow.
+
 ## [3.0.0] - 2025-02-08
 
 ### Changed

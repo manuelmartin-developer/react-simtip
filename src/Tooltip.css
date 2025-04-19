@@ -1,11 +1,15 @@
 :root {
-  --simtip-default-padding: 6px;
   --simtip-default-animation-duration: 300ms;
+  --simtip-default-border-color: #000;
+  --simtip-default-border-width: 0;
+  --simtip-default-border-style: solid;
+  --simtip-default-box-shadow: none;
+  --simtip-default-background-color: rgb(97 97 97 / 92%);
   --simtip-default-border-radius: 4px;
   --simtip-default-font-size: 11px;
   --simtip-default-max-width: 300px;
+  --simtip-default-padding: 6px;
   --simtip-default-text-color: #fff;
-  --simtip-default-background-color: rgb(97 97 97 / 92%);
 }
 
 .tooltip_wrapper {
@@ -13,10 +17,15 @@
     --simtip-background-color,
     var(--simtip-default-background-color)
   );
+  border: var(--simtip-border-width, var(--simtip-default-border-width))
+    var(--simtip-border-style, var(--simtip-default-border-style))
+    var(--simtip-border-color, var(--simtip-default-border-color));
   border-radius: var(
     --simtip-border-radius,
     var(--simtip-default-border-radius)
   );
+  box-shadow: var(--simtip-box-shadow, var(--simtip-default-box-shadow));
+
   color: var(--simtip-text-color, var(--simtip-default-text-color));
   display: inline-block;
   font-family: inherit;

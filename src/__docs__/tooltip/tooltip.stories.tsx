@@ -177,11 +177,35 @@ Playground.parameters = {
       description: "The padding of the tooltip",
       value: "6px",
     },
+    "simtip-border-color": {
+      category: "Border",
+      control: "color",
+      description: "The border color of the tooltip",
+      value: "#000",
+    },
+    "simtip-border-width": {
+      category: "Border",
+      control: "text",
+      description: "The border width of the tooltip",
+      value: "0px",
+    },
+    "simtip-border-style": {
+      category: "Border",
+      control: "text",
+      description: "The border style of the tooltip",
+      value: "solid",
+    },
     "simtip-border-radius": {
-      category: "Layout",
+      category: "Border",
       control: "text",
       description: "The border radius of the tooltip",
       value: "4px",
+    },
+    "simtip-box-shadow": {
+      category: "Shadow",
+      control: "text",
+      description: "The box shadow of the tooltip",
+      value: "none",
     },
     "simtip-font-size": {
       category: "Typography",
