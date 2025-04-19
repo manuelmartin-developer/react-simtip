@@ -1,4 +1,4 @@
-/* eslint-disable sort-keys */
+ 
 import { create } from "@storybook/theming/create";
 
 export default create({
