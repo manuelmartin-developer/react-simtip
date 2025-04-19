@@ -22,8 +22,10 @@ jobs:
           node-version: "22"
           registry-url: "https://registry.npmjs.org"
 
-      - name: 📥 Install Dependencies
-        run: npm install
+      - name: 📥 Clean and Install Dependencies
+        run: |
+          rm -rf node_modules package-lock.json
+          npm install
 
       - name: 💅 Lint
         run: npm run lint
