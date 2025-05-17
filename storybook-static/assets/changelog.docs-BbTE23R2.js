@@ -1,4 +1,4 @@
-import{j as n}from"./index-wGHcXKfb.js";import{useMDXComponents as r}from"./index-DL7Mpk60.js";import{M as a,a as d}from"./index-CFUSx0gr.js";import{C as s}from"./changelog.stories--PB_lGOJ.js";import"./index-B0WjJBI_.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CwPCC0ZT.js";import"./iframe-DC65I717.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`# Changelog
+import{j as n}from"./index-BDhFyJyw.js";import{useMDXComponents as r}from"./index-3lSaTjIr.js";import{M as a,a as d}from"./index-Htp63SOL.js";import{C as s}from"./changelog.stories--PB_lGOJ.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-B2KKL2uI.js";import"./index-CgfFrydU.js";import"./iframe-BuWvMVuf.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`# Changelog
 
 <!-- All notable changes to this project will be documented in this file.
 
@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). -->
 
 <br /><br />
+
+## [3.0.2] - 2025-04-19
+
+### Added
+
+- New CSS variables for tooltip border and box shadow.
 
 ## [3.0.0] - 2025-02-08
 
@@ -53,4 +59,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved performance
 - Reduced bundle size
 `;function t(e){return n.jsxs(n.Fragment,{children:[n.jsx(a,{of:s}),`
-`,n.jsx(d,{children:i})]})}function b(e={}){const{wrapper:o}={...r(),...e.components};return o?n.jsx(o,{...e,children:n.jsx(t,{...e})}):t()}export{b as default};
+`,n.jsx(d,{children:i})]})}function C(e={}){const{wrapper:o}={...r(),...e.components};return o?n.jsx(o,{...e,children:n.jsx(t,{...e})}):t()}export{C as default};
