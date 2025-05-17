@@ -6,7 +6,7 @@
     "url": "https://manuelmartin.dev"
   },
   "description": "A simple tooltip component for React",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "sideEffects": false,
   "license": "MIT",
   "keywords": [
