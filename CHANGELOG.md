@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [3.1.0] - 2025-05-29
+
+### Fixed
+
+- Updated peer dependencies to support React 19.
+
+### Changed
+
+- Removed css variables playground from storybook.
+
 ## [3.0.3] - 2025-05-17
 
 ### Fixed

@@ -8,9 +8,8 @@ const config: StorybookConfig = {
 
   addons: [
     "@storybook/addon-a11y",
-    "@ljcl/storybook-addon-cssprops",
-    "@storybook/addon-essentials",
-    "@storybook/blocks",
+    "@storybook/addon-docs/blocks",
+    "@storybook/addon-docs",
   ],
 
   core: {
