@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react-vite";
 import Tooltip from "../../Tooltip";
 import { TooltipProps } from "../../Tooltip.types";
 import React from "react";
@@ -167,77 +167,6 @@ Playground.args = {
   fontSize: undefined,
   variant: undefined,
   maxWidth: undefined,
-};
-
-Playground.parameters = {
-  cssprops: {
-    "simtip-padding": {
-      category: "Spacing",
-      control: "text",
-      description: "The padding of the tooltip",
-      value: "6px",
-    },
-    "simtip-border-color": {
-      category: "Border",
-      control: "color",
-      description: "The border color of the tooltip",
-      value: "#000",
-    },
-    "simtip-border-width": {
-      category: "Border",
-      control: "text",
-      description: "The border width of the tooltip",
-      value: "0px",
-    },
-    "simtip-border-style": {
-      category: "Border",
-      control: "text",
-      description: "The border style of the tooltip",
-      value: "solid",
-    },
-    "simtip-border-radius": {
-      category: "Border",
-      control: "text",
-      description: "The border radius of the tooltip",
-      value: "4px",
-    },
-    "simtip-box-shadow": {
-      category: "Shadow",
-      control: "text",
-      description: "The box shadow of the tooltip",
-      value: "none",
-    },
-    "simtip-font-size": {
-      category: "Typography",
-      control: "text",
-      description: "The font size of the tooltip",
-      value: "11px",
-    },
-    "simtip-background-color": {
-      category: "Color",
-      control: "color",
-      description: "The background color of the tooltip",
-      value: "rgb(97 97 97 / 92%)",
-    },
-    "simtip-text-color": {
-      category: "Color",
-      control: "color",
-      description: "The color of the tooltip",
-      value: "#fff",
-    },
-    "simtip-animation-duration": {
-      category: "Animation",
-      control: "text",
-      description: "The animation duration of the tooltip",
-      value: "300ms",
-    },
-    "simtip-max-width": {
-      category: "Layout",
-      control: "text",
-      description: "The max width of the tooltip in pixels",
-      value: "300px",
-    },
-  },
 };
 
 export const Welcome: StoryObj<TooltipProps> = () => {
