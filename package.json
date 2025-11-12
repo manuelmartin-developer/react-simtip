@@ -39,6 +39,9 @@
     "/dist",
     "README.md"
   ],
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "build": "tsc && vite build",
     "build-storybook": "storybook build",
