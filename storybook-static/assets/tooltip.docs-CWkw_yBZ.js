@@ -1,4 +1,4 @@
-import{j as e}from"./index-7uxZUkkO.js";import{useMDXComponents as s}from"./index-fMOWcjb7.js";import{M as r,S as l,a}from"./blocks-CVuPsv_n.js";import{T as c,W as d,a as t}from"./tooltip.stories-DODNveyV.js";import"./iframe-DlqPq70Q.js";import"./index-DrXLGBEd.js";function o(i){const n={code:"code",div:"div",h1:"h1",h2:"h2",h3:"h3",img:"img",p:"p",pre:"pre",strong:"strong",...s(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{of:c}),`
+import{j as e}from"./index-DiEcRVtg.js";import{useMDXComponents as s}from"./index-CGlilHYk.js";import{M as r,S as l,a}from"./blocks-SZcXnVUt.js";import{T as c,W as d,a as t}from"./tooltip.stories-BPgJZ0eN.js";import"./iframe-DMcQeSN6.js";import"./preload-helper-Dp1pzeXC.js";import"./index-ZqEX8jKa.js";function o(i){const n={code:"code",div:"div",h1:"h1",h2:"h2",h3:"h3",img:"img",p:"p",pre:"pre",strong:"strong",...s(),...i.components};return e.jsxs(e.Fragment,{children:[e.jsx(r,{of:c}),`
 `,e.jsx(l,{of:d}),`
 `,e.jsx(n.p,{children:"React SimTip is a simple tooltip component that can be used to display additional information when a user hovers over an element. The tooltip component is highly customizable and can be used to display text, images, or any other content."}),`
 `,e.jsx(n.h2,{id:"installation",children:"Installation"}),`
@@ -243,4 +243,4 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua.`,maxWidth:400,childr
   --simtip-padding: 12px;
   --simtip-text-color: white;
 }
-`})})]})}function g(i={}){const{wrapper:n}={...s(),...i.components};return n?e.jsx(n,{...i,children:e.jsx(o,{...i})}):o(i)}export{g as default};
+`})})]})}function f(i={}){const{wrapper:n}={...s(),...i.components};return n?e.jsx(n,{...i,children:e.jsx(o,{...i})}):o(i)}export{f as default};
