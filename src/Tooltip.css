@@ -25,7 +25,6 @@
     var(--simtip-default-border-radius)
   );
   box-shadow: var(--simtip-box-shadow, var(--simtip-default-box-shadow));
-
   color: var(--simtip-text-color, var(--simtip-default-text-color));
   display: inline-block;
   font-family: inherit;
@@ -33,6 +32,7 @@
   max-width: var(--simtip-max-width, var(--simtip-default-max-width));
   padding: var(--simtip-padding, var(--simtip-default-padding));
   position: relative;
+  will-change: opacity, transform;
 }
 
 .tooltip_wrapper.dark {
@@ -66,63 +66,42 @@
 }
 
 .tooltip_wrapper.fade {
-  -webkit-animation: fade
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.39, 0.575, 0.565, 1) both;
   animation: fade
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .tooltip_wrapper.scale {
-  -webkit-animation: scale
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: scale
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.flip {
-  -webkit-animation: flip
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: flip
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.slide {
-  -webkit-animation: slide
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .tooltip_wrapper.swing {
-  -webkit-animation: swing
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   animation: swing
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 
 .tooltip_wrapper.bounce {
-  -webkit-animation: bounce forwards
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    ease-in-out;
   animation: bounce forwards
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     ease-in-out;
 }
 
 .tooltip_wrapper.flicker {
-  -webkit-animation: flicker
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    linear both;
   animation: flicker
     var(--simtip-animation-duration, var(--simtip-default-animation-duration))
     linear both;
@@ -132,131 +111,58 @@
   fill: var(--simtip-background-color, var(--simtip-default-background-color));
 }
 
-/* Animations */
 @keyframes fade {
   from {
     opacity: 0;
   }
-
-  to {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade {
-  from {
-    opacity: 0;
-  }
-
   to {
     opacity: 1;
   }
 }
 
-@-webkit-keyframes scale {
-  0% {
-    -webkit-transform: scale(0);
-    opacity: 1;
-    transform: scale(0);
-  }
-  100% {
-    -webkit-transform: scale(1);
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 @keyframes scale {
   0% {
-    -webkit-transform: scale(0);
-    opacity: 1;
     transform: scale(0);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: scale(1);
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes flip {
-  0% {
-    -webkit-transform: rotateX(80deg);
-    opacity: 0;
-    transform: rotateX(80deg);
-  }
-  100% {
-    -webkit-transform: rotateX(0);
-    opacity: 1;
-    transform: rotateX(0);
-  }
-}
 @keyframes flip {
   0% {
-    -webkit-transform: rotateX(80deg);
-    opacity: 0;
     transform: rotateX(80deg);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: rotateX(0);
-    opacity: 1;
     transform: rotateX(0);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(-100px);
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
 @keyframes slide {
   0% {
-    -webkit-transform: translateX(-100px);
-    opacity: 0;
     transform: translateX(-100px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(0);
-    opacity: 1;
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotateY(-70deg);
-    -webkit-transform-origin: left;
-    opacity: 0;
-    transform: rotateY(-70deg);
-    transform-origin: left;
-  }
-  100% {
-    -webkit-transform: rotateY(0);
-    -webkit-transform-origin: left;
-    opacity: 1;
-    transform: rotateY(0);
-    transform-origin: left;
-  }
-}
 @keyframes swing {
   0% {
-    -webkit-transform: rotateY(-70deg);
-    -webkit-transform-origin: left;
-    opacity: 0;
     transform: rotateY(-70deg);
     transform-origin: left;
+    opacity: 0;
   }
   100% {
-    -webkit-transform: rotateY(0);
-    -webkit-transform-origin: left;
-    opacity: 1;
     transform: rotateY(0);
     transform-origin: left;
+    opacity: 1;
   }
 }
 
@@ -264,125 +170,14 @@
   0% {
     transform: translateY(0) scale(0.8);
   }
-
   50% {
     transform: translateY(-15px) scale(1.1);
   }
-
   100% {
     transform: translateY(0) scale(1);
   }
 }
 
-@-webkit-keyframes bounce {
-  0% {
-    transform: translateY(0) scale(0.8);
-  }
-
-  50% {
-    transform: translateY(-15px) scale(1.1);
-  }
-
-  100% {
-    transform: translateY(0) scale(1);
-  }
-}
-
-@-webkit-keyframes flicker {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  10.1% {
-    opacity: 1;
-  }
-  10.2% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  20.1% {
-    opacity: 1;
-  }
-  20.6% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  30.1% {
-    opacity: 1;
-  }
-  30.5% {
-    opacity: 1;
-  }
-  30.6% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0;
-  }
-  45.1% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  55.1% {
-    opacity: 0;
-  }
-  57% {
-    opacity: 0;
-  }
-  57.1% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  60.1% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  65.1% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  75.1% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  77.1% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  85.1% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  86.1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @keyframes flicker {
   0% {
     opacity: 0;

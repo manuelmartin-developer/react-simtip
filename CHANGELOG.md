@@ -7,7 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
-## [3.1.0] - 2025-05-29
+## [3.0.5] - 2025-11-12
+
+### Fixed
+
+- Dev dependencies and documentation updates.
+- CSS improvements.
+
+## [3.0.4] - 2025-05-29
 
 ### Fixed
 

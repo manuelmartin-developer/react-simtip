@@ -1,4 +1,4 @@
-import{j as n}from"./index-7uxZUkkO.js";import{useMDXComponents as t}from"./index-fMOWcjb7.js";import{M as a,a as r}from"./blocks-CVuPsv_n.js";import{C as s}from"./changelog.stories--PB_lGOJ.js";import"./iframe-DlqPq70Q.js";import"./index-DrXLGBEd.js";const i=`# Changelog
+import{j as n}from"./index-DiEcRVtg.js";import{useMDXComponents as d}from"./index-CGlilHYk.js";import{M as r,a}from"./blocks-SZcXnVUt.js";import{C as s}from"./changelog.stories--PB_lGOJ.js";import"./iframe-DMcQeSN6.js";import"./preload-helper-Dp1pzeXC.js";import"./index-ZqEX8jKa.js";const i=`# Changelog
 
 <!-- All notable changes to this project will be documented in this file.
 
@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
-## [3.1.0] - 2025-05-29
+## [3.0.4] - 2025-05-29
 
 ### Fixed
 
@@ -74,5 +74,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed some bugs
 - Improved performance
 - Reduced bundle size
-`;function d(e){return n.jsxs(n.Fragment,{children:[n.jsx(a,{of:s}),`
-`,n.jsx(r,{children:i})]})}function u(e={}){const{wrapper:o}={...t(),...e.components};return o?n.jsx(o,{...e,children:n.jsx(d,{...e})}):d()}export{u as default};
+`;function t(e){return n.jsxs(n.Fragment,{children:[n.jsx(r,{of:s}),`
+`,n.jsx(a,{children:i})]})}function x(e={}){const{wrapper:o}={...d(),...e.components};return o?n.jsx(o,{...e,children:n.jsx(t,{...e})}):t()}export{x as default};

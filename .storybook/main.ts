@@ -6,11 +6,7 @@ const config: StorybookConfig = {
     "../src/__docs__/**/*.stories.tsx",
   ],
 
-  addons: [
-    "@storybook/addon-a11y",
-    "@storybook/addon-docs/blocks",
-    "@storybook/addon-docs",
-  ],
+  addons: ["@storybook/addon-a11y", "@storybook/addon-docs"],
 
   core: {
     disableTelemetry: true,
