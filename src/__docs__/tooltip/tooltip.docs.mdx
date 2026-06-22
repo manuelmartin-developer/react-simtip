@@ -54,6 +54,7 @@ The tooltip component accepts the following props:
 | animation       | enum     | undefined     | The animation to use when showing the tooltip. Possible values are "fade", "scale", "flip", "slide", "swing", "bounce" and "flicker". |
 | animationDuration | number | 300ms           | The duration of the animation in milliseconds. |
 | backgroundColor | string   | rgb(97 97 97 / 92%)       | The background color of the tooltip. |
+| border          | string   | none           | The border of the tooltip (CSS shorthand, e.g. "1px solid red"). |
 | borderRadius    | number   | 4           | The border radius of the tooltip in pixels. |
 | className       | string   | undefined   | The class name of the tooltip. |
 | color          | string   | #fff        | The text color of the tooltip. |
@@ -66,6 +67,7 @@ The tooltip component accepts the following props:
 | open           | boolean  | false       | Whether the tooltip is open. |
 | padding        | number   | 6          | The padding of the tooltip in pixels. |
 | placement      | enum     | top         | The placement of the tooltip relative to the target element. Possible values are "top", "right", "bottom", and "left". |
+| shadow          | string   | none           | The box shadow of the tooltip (e.g. "0 2px 8px rgba(0,0,0,0.3)"). |
 | showDelay      | number   | 100ms          | The delay in milliseconds before showing the tooltip. |
 | variant        | enum     | dark        | The variant of the tooltip. Possible values are "light", "dark", "error", "warning", "info", and "success". |
 `}
@@ -177,6 +179,36 @@ The backgroundColor prop is used to specify the background color of the tooltip.
 </div>
 
 <br />
+### `border`
+
+The border prop is used to specify the border of the tooltip using CSS shorthand. The arrow color adapts to match the border color.
+
+```jsx
+<Tooltip content="👋 Hi there!" border="1px solid red">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" border="1px solid #e74c3c">
+    <span className="tooltip-children">1px solid</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" border="2px dashed #3498db">
+    <span className="tooltip-children">2px dashed</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" border="2px dotted #2ecc71" hasArrow>
+    <span className="tooltip-children">2px dotted + arrow</span>
+  </Tooltip>
+</div>
+
+<br />
 ### `borderRadius`
 
 The borderRadius prop is used to specify the border radius of the tooltip in pixels.
@@ -283,7 +315,7 @@ The content prop is used to specify the content that will be displayed in the to
   <Tooltip
     content={
       <img
-        fetchpriority="high"
+        fetchPriority="high"
         src="/assets/img/logo.png"
         alt="placeholder"
         style={{
@@ -559,6 +591,36 @@ The placement prop is used to specify the placement of the tooltip relative to t
 </div>
 
 <br />
+### `shadow`
+
+The shadow prop is used to specify the box shadow of the tooltip.
+
+```jsx
+<Tooltip content="👋 Hi there!" shadow="0 2px 8px rgba(0,0,0,0.3)">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+<div
+  style={{
+    display: "flex",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "2rem",
+  }}
+>
+  <Tooltip content="👋 Hi there!" shadow="0 2px 4px rgba(0,0,0,0.2)">
+    <span className="tooltip-children">Small</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" shadow="0 4px 12px rgba(0,0,0,0.3)">
+    <span className="tooltip-children">Medium</span>
+  </Tooltip>
+  <Tooltip content="👋 Hi there!" shadow="0 8px 24px rgba(0,0,0,0.4)" hasArrow>
+    <span className="tooltip-children">Large + arrow</span>
+  </Tooltip>
+</div>
+
+<br />
 ### `showDelay`
 
 The showDelay prop is used to specify the delay in milliseconds before showing the tooltip.
@@ -642,6 +704,7 @@ If you want to style a **specific** tooltip, this way is the best.
 <Tooltip
   content="👋 Hi there!"
   backgroundColor="red"
+  border="1px solid #c0392b"
   borderRadius={8}
   color="white"
   fontSize={16}
@@ -650,6 +713,7 @@ If you want to style a **specific** tooltip, this way is the best.
   offset={16}
   padding={12}
   placement="right"
+  shadow="0 4px 12px rgba(0,0,0,0.3)"
   variant="error"
 >
   <button>Hover over me</button>
@@ -683,14 +747,15 @@ This is the way to style **all** tooltips at once.
 
 ```css
 :root {
-  --simtip-animation-duration: 300ms;
-  --simtip-background-color: red;
-  --simtip-border-radius: 8px;
-  --simtip-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  --simtip-color: white;
-  --simtip-font-size: 16px;
-  --simtip-max-width: 200px;
-  --simtip-padding: 12px;
-  --simtip-text-color: white;
+  --simtip-default-animation-duration: 300ms;
+  --simtip-default-background-color: red;
+  --simtip-default-border-radius: 8px;
+  --simtip-default-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --simtip-default-font-size: 16px;
+  --simtip-default-max-width: 200px;
+  --simtip-default-padding: 12px;
+  --simtip-default-text-color: white;
 }
 ```
+
+To override specific tooltip instances, use the props or set `--simtip-*` variables directly on the tooltip wrapper via the `className` prop.
