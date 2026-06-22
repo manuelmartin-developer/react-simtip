@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [4.0.0] - 2026-06-21
+
+### Added
+
+- New `border` and `shadow` props.
+- Accessibility improvements.
+
+### Changed
+
+- **Breaking**: Arrow changed from SVG to CSS border triangles.
+- **Breaking**: Wrapper display changed from `inline-block` to `inline-flex`.
+- Positioning is now purely CSS-based.
+
 ## [3.0.5] - 2025-11-12
 
 ### Fixed

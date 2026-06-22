@@ -1,275 +1,181 @@
 :root {
-  --simtip-default-animation-duration: 300ms;
-  --simtip-default-border-color: #000;
-  --simtip-default-border-width: 0;
-  --simtip-default-border-style: solid;
-  --simtip-default-box-shadow: none;
   --simtip-default-background-color: rgb(97 97 97 / 92%);
+  --simtip-default-border: none;
   --simtip-default-border-radius: 4px;
+  --simtip-default-box-shadow: none;
+  --simtip-default-text-color: #fff;
   --simtip-default-font-size: 11px;
   --simtip-default-max-width: 300px;
   --simtip-default-padding: 6px;
-  --simtip-default-text-color: #fff;
+  --simtip-default-animation-duration: 300ms;
 }
 
 .tooltip_wrapper {
-  background-color: var(
-    --simtip-background-color,
-    var(--simtip-default-background-color)
-  );
-  border: var(--simtip-border-width, var(--simtip-default-border-width))
-    var(--simtip-border-style, var(--simtip-default-border-style))
-    var(--simtip-border-color, var(--simtip-default-border-color));
-  border-radius: var(
-    --simtip-border-radius,
-    var(--simtip-default-border-radius)
-  );
+  background-color: var(--simtip-background-color, var(--simtip-default-background-color));
+  border: var(--simtip-border, var(--simtip-default-border));
+  border-radius: var(--simtip-border-radius, var(--simtip-default-border-radius));
   box-shadow: var(--simtip-box-shadow, var(--simtip-default-box-shadow));
   color: var(--simtip-text-color, var(--simtip-default-text-color));
-  display: inline-block;
   font-family: inherit;
   font-size: var(--simtip-font-size, var(--simtip-default-font-size));
   max-width: var(--simtip-max-width, var(--simtip-default-max-width));
   padding: var(--simtip-padding, var(--simtip-default-padding));
+  width: max-content;
   position: relative;
-  will-change: opacity, transform;
 }
 
 .tooltip_wrapper.dark {
   --simtip-text-color: #fff;
   --simtip-background-color: rgb(97 97 97 / 92%);
 }
-
 .tooltip_wrapper.light {
   --simtip-text-color: #000;
   --simtip-background-color: rgb(255 255 255 / 92%);
 }
-
 .tooltip_wrapper.success {
   --simtip-text-color: #000;
   --simtip-background-color: rgb(144 190 109 / 92%);
 }
-
 .tooltip_wrapper.warning {
   --simtip-text-color: #000;
   --simtip-background-color: rgb(249 199 79 / 92%);
 }
-
 .tooltip_wrapper.error {
   --simtip-text-color: #fff;
   --simtip-background-color: rgb(249 65 68 / 92%);
 }
-
 .tooltip_wrapper.info {
   --simtip-text-color: #fff;
   --simtip-background-color: rgb(39 125 161 / 92%);
 }
 
 .tooltip_wrapper.fade {
-  animation: fade
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade var(--simtip-animation-duration, var(--simtip-default-animation-duration)) cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
-
 .tooltip_wrapper.scale {
-  animation: scale
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale var(--simtip-animation-duration, var(--simtip-default-animation-duration)) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 .tooltip_wrapper.flip {
-  animation: flip
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: flip var(--simtip-animation-duration, var(--simtip-default-animation-duration)) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 .tooltip_wrapper.slide {
-  animation: slide
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide var(--simtip-animation-duration, var(--simtip-default-animation-duration)) cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-
 .tooltip_wrapper.swing {
-  animation: swing
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing var(--simtip-animation-duration, var(--simtip-default-animation-duration)) cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
-
 .tooltip_wrapper.bounce {
-  animation: bounce forwards
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    ease-in-out;
+  animation: bounce forwards var(--simtip-animation-duration, var(--simtip-default-animation-duration)) ease-in-out;
 }
-
 .tooltip_wrapper.flicker {
-  animation: flicker
-    var(--simtip-animation-duration, var(--simtip-default-animation-duration))
-    linear both;
+  animation: flicker var(--simtip-animation-duration, var(--simtip-default-animation-duration)) linear both;
 }
 
 .tooltip_arrow {
-  fill: var(--simtip-background-color, var(--simtip-default-background-color));
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.tooltip_arrow--top {
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid var(--simtip-arrow-color, var(--simtip-background-color, var(--simtip-default-background-color)));
+}
+.tooltip_arrow--bottom {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--simtip-arrow-color, var(--simtip-background-color, var(--simtip-default-background-color)));
+}
+.tooltip_arrow--left {
+  top: 50%;
+  right: -8px;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid var(--simtip-arrow-color, var(--simtip-background-color, var(--simtip-default-background-color)));
+}
+.tooltip_arrow--right {
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid var(--simtip-arrow-color, var(--simtip-background-color, var(--simtip-default-background-color)));
 }
 
 @keyframes fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0 }
+  to { opacity: 1 }
 }
-
 @keyframes scale {
-  0% {
-    transform: scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+  0% { transform: scale(0); opacity: 1 }
+  100% { transform: scale(1); opacity: 1 }
 }
-
 @keyframes flip {
-  0% {
-    transform: rotateX(80deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateX(0);
-    opacity: 1;
-  }
+  0% { transform: rotateX(80deg); opacity: 0 }
+  100% { transform: rotateX(0); opacity: 1 }
 }
-
 @keyframes slide {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  0% { transform: translateX(-100px); opacity: 0 }
+  100% { transform: translateX(0); opacity: 1 }
 }
-
 @keyframes swing {
-  0% {
-    transform: rotateY(-70deg);
-    transform-origin: left;
-    opacity: 0;
-  }
-  100% {
-    transform: rotateY(0);
-    transform-origin: left;
-    opacity: 1;
-  }
+  0% { transform-origin: left; transform: rotateY(-70deg); opacity: 0 }
+  100% { transform-origin: left; transform: rotateY(0); opacity: 1 }
 }
-
 @keyframes bounce {
-  0% {
-    transform: translateY(0) scale(0.8);
-  }
-  50% {
-    transform: translateY(-15px) scale(1.1);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-  }
+  0% { transform: translateY(0) scale(0.8) }
+  50% { transform: translateY(-15px) scale(1.1) }
+  100% { transform: translateY(0) scale(1) }
+}
+@keyframes flicker {
+  0% { opacity: 0 }
+  10% { opacity: 0 }
+  10.1% { opacity: 1 }
+  10.2% { opacity: 0 }
+  20% { opacity: 0 }
+  20.1% { opacity: 1 }
+  20.6% { opacity: 0 }
+  30% { opacity: 0 }
+  30.1% { opacity: 1 }
+  30.5% { opacity: 1 }
+  30.6% { opacity: 0 }
+  45% { opacity: 0 }
+  45.1% { opacity: 1 }
+  50% { opacity: 1 }
+  55% { opacity: 1 }
+  55.1% { opacity: 0 }
+  57% { opacity: 0 }
+  57.1% { opacity: 1 }
+  60% { opacity: 1 }
+  60.1% { opacity: 0 }
+  65% { opacity: 0 }
+  65.1% { opacity: 1 }
+  75% { opacity: 1 }
+  75.1% { opacity: 0 }
+  77% { opacity: 0 }
+  77.1% { opacity: 1 }
+  85% { opacity: 1 }
+  85.1% { opacity: 0 }
+  86% { opacity: 0 }
+  86.1% { opacity: 1 }
+  100% { opacity: 1 }
 }
 
-@keyframes flicker {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 0;
-  }
-  10.1% {
-    opacity: 1;
-  }
-  10.2% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 0;
-  }
-  20.1% {
-    opacity: 1;
-  }
-  20.6% {
-    opacity: 0;
-  }
-  30% {
-    opacity: 0;
-  }
-  30.1% {
-    opacity: 1;
-  }
-  30.5% {
-    opacity: 1;
-  }
-  30.6% {
-    opacity: 0;
-  }
-  45% {
-    opacity: 0;
-  }
-  45.1% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  55% {
-    opacity: 1;
-  }
-  55.1% {
-    opacity: 0;
-  }
-  57% {
-    opacity: 0;
-  }
-  57.1% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 1;
-  }
-  60.1% {
-    opacity: 0;
-  }
-  65% {
-    opacity: 0;
-  }
-  65.1% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
-  }
-  75.1% {
-    opacity: 0;
-  }
-  77% {
-    opacity: 0;
-  }
-  77.1% {
-    opacity: 1;
-  }
-  85% {
-    opacity: 1;
-  }
-  85.1% {
-    opacity: 0;
-  }
-  86% {
-    opacity: 0;
-  }
-  86.1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
+@media (prefers-reduced-motion: reduce) {
+  .tooltip_wrapper.fade,
+  .tooltip_wrapper.scale,
+  .tooltip_wrapper.flip,
+  .tooltip_wrapper.slide,
+  .tooltip_wrapper.swing,
+  .tooltip_wrapper.bounce,
+  .tooltip_wrapper.flicker {
+    animation: none;
   }
 }

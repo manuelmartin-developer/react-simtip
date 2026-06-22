@@ -32,6 +32,20 @@ const meta: Meta<TooltipProps> = {
         type: "color",
       },
     },
+    border: {
+      description:
+        "The border of the tooltip (CSS shorthand, e.g. '1px solid red')",
+      control: {
+        type: "text",
+      },
+    },
+    shadow: {
+      description:
+        "The box shadow of the tooltip (e.g. '0 2px 8px rgba(0,0,0,0.3)')",
+      control: {
+        type: "text",
+      },
+    },
     borderRadius: {
       description: "The border radius of the tooltip",
       control: {
@@ -167,6 +181,8 @@ Playground.args = {
   fontSize: undefined,
   variant: undefined,
   maxWidth: undefined,
+  border: undefined,
+  shadow: undefined,
 };
 
 export const Welcome: StoryObj<TooltipProps> = () => {
@@ -174,7 +190,7 @@ export const Welcome: StoryObj<TooltipProps> = () => {
     <h1>
       <Tooltip
         content="👋 Hi there!"
-        offset={10}
+        offset={8}
         fontSize={16}
         backgroundColor="rgba(39, 125, 161, 0.92)"
         color="white"
