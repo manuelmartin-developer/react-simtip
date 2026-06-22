@@ -114,7 +114,30 @@ export interface TooltipProps {
      * */
     animationDuration?: number;
     /**
-     * The color of the tooltip.
+     * The border of the tooltip (CSS shorthand).
+     * The arrow inherits the border color for consistency.
+     * @type {string}
+     * @optional
+     * @default "none"
+     * @example
+     * <Tooltip border="1px solid #000" content="This is a tooltip">
+     *    <button>Hover me</button>
+     * </Tooltip>
+     */
+    border?: string;
+    /**
+     * The box shadow of the tooltip.
+     * @type {string}
+     * @optional
+     * @default "none"
+     * @example
+     * <Tooltip shadow="0 2px 4px rgba(0,0,0,0.2)" content="This is a tooltip">
+     *    <button>Hover me</button>
+     * </Tooltip>
+     */
+    shadow?: string;
+    /**
+     * The background color of the tooltip.
      * @type {string}
      * @optional
      * @default "rgb(97 97 97 / 92%)"

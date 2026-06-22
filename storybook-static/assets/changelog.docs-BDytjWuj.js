@@ -1,4 +1,4 @@
-import{j as n}from"./index-DiEcRVtg.js";import{useMDXComponents as d}from"./index-CGlilHYk.js";import{M as r,a}from"./blocks-SZcXnVUt.js";import{C as s}from"./changelog.stories--PB_lGOJ.js";import"./iframe-DMcQeSN6.js";import"./preload-helper-Dp1pzeXC.js";import"./index-ZqEX8jKa.js";const i=`# Changelog
+import{i as e}from"./preload-helper-xPQekRTU.js";import{a as t,b as n,c as r,o as i}from"./blocks-Ce88DDBo.js";import{t as a}from"./jsx-runtime-CaZkqeYb.js";import{t as o}from"./mdx-react-shim-JFD7vqrE.js";import{n as s,t as c}from"./changelog.stories-DeEAt8no.js";var l,u=e((()=>{l=`# Changelog
 
 <!-- All notable changes to this project will be documented in this file.
 
@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). -->
 
 <br /><br />
+
+## [4.0.0] - 2026-06-21
+
+### Added
+
+- New \`border\` and \`shadow\` props.
+- Accessibility improvements.
+
+### Changed
+
+- **Breaking**: Arrow changed from SVG to CSS border triangles.
+- **Breaking**: Wrapper display changed from \`inline-block\` to \`inline-flex\`.
+- Positioning is now purely CSS-based.
+
+## [3.0.5] - 2025-11-12
+
+### Fixed
+
+- Dev dependencies and documentation updates.
+- CSS improvements.
 
 ## [3.0.4] - 2025-05-29
 
@@ -74,5 +94,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed some bugs
 - Improved performance
 - Reduced bundle size
-`;function t(e){return n.jsxs(n.Fragment,{children:[n.jsx(r,{of:s}),`
-`,n.jsx(a,{children:i})]})}function x(e={}){const{wrapper:o}={...d(),...e.components};return o?n.jsx(o,{...e,children:n.jsx(t,{...e})}):t()}export{x as default};
+`}));function d(e){return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(i,{of:c}),`
+`,(0,p.jsx)(t,{children:l})]})}function f(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,p.jsx)(t,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;e((()=>{p=a(),o(),r(),u(),s()}))();export{f as default};
