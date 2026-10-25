@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [4.0.2] - 2026-20-25
+
+### Fixed
+
+- Dev dependency marked as dependency.
+
 ## [4.0.1] - 2026-20-25
 
 ### Changed
