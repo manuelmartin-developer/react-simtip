@@ -167,7 +167,9 @@ const Tooltip = ({
     ...(typeof borderRadius === "number" && {
       "--simtip-border-radius": `${borderRadius}px`,
     }),
-    ...(fontSize && { "--simtip-font-size": `${fontSize}px` }),
+    ...(typeof fontSize === "number" && {
+      "--simtip-font-size": `${fontSize}px`,
+    }),
     ...(maxWidth && { "--simtip-max-width": `${maxWidth}px` }),
     ...(border !== undefined && { "--simtip-border": border }),
     ...(shadow !== undefined && { "--simtip-box-shadow": shadow }),
@@ -198,7 +200,8 @@ const Tooltip = ({
             style={{
               opacity: 1,
               zIndex: 9999,
-              fontSize: "var(--simtip-font-size, 11px)",
+              fontSize:
+                "var(--simtip-font-size, var(--simtip-default-font-size))",
               ...cssVars,
             }}
             onMouseEnter={handleKeepOpen}
