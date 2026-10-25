@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <br /><br />
 
+## [4.0.1] - 2026-20-25
+
+### Changed
+
+- Improved storybook playground for CSS variables.
+
+### Fixed
+
+- Updated dev dependencies for security improvements.
+- Override default CSS variables.
+
 ## [4.0.0] - 2026-06-21
 
 ### Added
