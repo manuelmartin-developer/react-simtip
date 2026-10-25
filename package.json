@@ -6,7 +6,7 @@
     "url": "https://manuelmartin.dev"
   },
   "description": "A simple tooltip component for React",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "sideEffects": false,
   "license": "MIT",
   "keywords": [
@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@ljcl/storybook-addon-cssprops": "^6.1.0",
     "@storybook/addon-a11y": "^10.4.6",
     "@storybook/addon-docs": "^10.4.6",
     "@storybook/react-vite": "^10.4.6",
@@ -85,8 +86,5 @@
   "allowScripts": {
     "fsevents@2.3.3": true,
     "esbuild@0.28.2": true
-  },
-  "dependencies": {
-    "@ljcl/storybook-addon-cssprops": "^6.1.0"
   }
 }
