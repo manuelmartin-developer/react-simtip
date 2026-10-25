@@ -743,19 +743,76 @@ This is the way to style **several** tooltips at once.
 
 ### With CSS variables
 
-This is the way to style **all** tooltips at once.
+CSS variables can provide theme defaults for all tooltips or style a group or
+single instance. The `--simtip-*` variables are the customization API; they
+override the selected variant's defaults. Variables passed as component props
+take precedence over CSS variables for that instance.
 
 ```css
 :root {
-  --simtip-default-animation-duration: 300ms;
-  --simtip-default-background-color: red;
-  --simtip-default-border-radius: 8px;
-  --simtip-default-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  --simtip-default-font-size: 16px;
-  --simtip-default-max-width: 200px;
-  --simtip-default-padding: 12px;
-  --simtip-default-text-color: white;
+  --simtip-background-color: #252a34;
+  --simtip-text-color: #fff;
+  --simtip-border: 1px solid #526078;
+  --simtip-border-radius: 8px;
+  --simtip-box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
+  --simtip-font-size: 14px;
+  --simtip-max-width: 320px;
+  --simtip-padding: 10px 12px;
+  --simtip-animation-duration: 300ms;
 }
 ```
 
-To override specific tooltip instances, use the props or set `--simtip-*` variables directly on the tooltip wrapper via the `className` prop.
+<Markdown>
+  {`
+| CSS variable | Default | Description |
+| --- | --- | --- |
+| \`--simtip-background-color\` | Depends on \`variant\` | Tooltip background; also colors the arrow unless \`--simtip-arrow-color\` is set. |
+| \`--simtip-text-color\` | Depends on \`variant\` | Tooltip text color. |
+| \`--simtip-arrow-color\` | Tooltip background | Arrow color. |
+| \`--simtip-border\` | \`none\` | CSS border shorthand. |
+| \`--simtip-border-radius\` | \`4px\` | Corner radius. |
+| \`--simtip-box-shadow\` | \`none\` | CSS box shadow. |
+| \`--simtip-font-size\` | \`11px\` | Text size. |
+| \`--simtip-max-width\` | \`300px\` | Maximum tooltip width. |
+| \`--simtip-padding\` | \`6px\` | Inner spacing. |
+| \`--simtip-animation-duration\` | \`300ms\` | Duration used by the entrance animations. |
+`}
+</Markdown>
+
+The variants have their own background and text color tokens. For example,
+`--simtip-light-background-color` overrides the light variant's default
+`--simtip-default-light-background-color`. This pattern is available for
+`dark`, `light`, `success`, `warning`, `error`, and `info`:
+
+```css
+:root {
+  --simtip-light-background-color: #f0f4ff;
+  --simtip-light-text-color: #172554;
+  --simtip-error-background-color: #7f1d1d;
+  --simtip-error-text-color: white;
+}
+```
+
+Generic color tokens (`--simtip-background-color` and `--simtip-text-color`)
+take precedence over variant-specific tokens. Component styling props take
+precedence over both.
+
+To customize only selected instances, set variables in a class and pass it
+through `className`:
+
+```css
+.my-tooltip {
+  --simtip-light-background-color: #252a34;
+  --simtip-light-text-color: white;
+}
+```
+
+```jsx
+<Tooltip content="Custom theme" className="my-tooltip" variant="light">
+  <button>Hover over me</button>
+</Tooltip>
+```
+
+The theme variables are inherited, so they can also be set on any ancestor
+container instead of `:root`. The `--simtip-default-*` variables define the
+default values in the component stylesheet; use `--simtip-*` to override them.

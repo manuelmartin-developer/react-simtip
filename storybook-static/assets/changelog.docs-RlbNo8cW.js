@@ -1,4 +1,4 @@
-import{i as e}from"./preload-helper-xPQekRTU.js";import{a as t,b as n,c as r,o as i}from"./blocks-Ce88DDBo.js";import{t as a}from"./jsx-runtime-CaZkqeYb.js";import{t as o}from"./mdx-react-shim-JFD7vqrE.js";import{n as s,t as c}from"./changelog.stories-DeEAt8no.js";var l,u=e((()=>{l=`# Changelog
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{i as t,r as n}from"./react-rTBBE96Z.js";import{t as r}from"./jsx-runtime-MKhVqBIO.js";import{a as i,c as a,o}from"./blocks-BJHJHjzE.js";import{n as s,t as c}from"./changelog.stories-DPYxVN1-.js";var l;function u(){return(u=e((()=>{l=`# Changelog
 
 <!-- All notable changes to this project will be documented in this file.
 
@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). -->
 
 <br /><br />
+
+## [4.0.1] - 2026-20-25
+
+### Changed
+
+- Improved storybook playground for CSS variables.
+
+### Fixed
+
+- Updated dev dependencies for security improvements.
+- Override default CSS variables.
 
 ## [4.0.0] - 2026-06-21
 
@@ -94,5 +105,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed some bugs
 - Improved performance
 - Reduced bundle size
-`}));function d(e){return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(i,{of:c}),`
-`,(0,p.jsx)(t,{children:l})]})}function f(e={}){let{wrapper:t}={...n(),...e.components};return t?(0,p.jsx)(t,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;e((()=>{p=a(),o(),r(),u(),s()}))();export{f as default};
+`})))()}function d(e){return(0,p.jsxs)(p.Fragment,{children:[(0,p.jsx)(o,{of:c}),`
+`,(0,p.jsx)(i,{children:l})]})}function f(e={}){let{wrapper:n}={...t(),...e.components};return n?(0,p.jsx)(n,{...e,children:(0,p.jsx)(d,{...e})}):d(e)}var p;function m(){return(m=e((()=>{p=r(),n(),a(),u(),s()})))()}m();export{f as default};

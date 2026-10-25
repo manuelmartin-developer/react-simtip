@@ -43,7 +43,9 @@ describe("Tooltip component", () => {
       </Tooltip>,
     );
 
-    expect(screen.getByTestId("tooltip")).toContainHTML("<strong>Bold</strong>");
+    expect(screen.getByTestId("tooltip")).toContainHTML(
+      "<strong>Bold</strong>",
+    );
   });
 
   it("should set role='tooltip'", () => {
@@ -183,6 +185,9 @@ describe("Tooltip component", () => {
     expect(el).toHaveStyle("--simtip-padding: 10px");
     expect(el).toHaveStyle("--simtip-border-radius: 8px");
     expect(el).toHaveStyle("--simtip-font-size: 14px");
+    expect(el.style.fontSize).toBe(
+      "var(--simtip-font-size, var(--simtip-default-font-size))",
+    );
     expect(el).toHaveStyle("--simtip-max-width: 200px");
     expect(el).toHaveStyle("--simtip-animation-duration: 500ms");
   });
@@ -213,6 +218,38 @@ describe("Tooltip component", () => {
 
     const el = screen.getByTestId("tooltip");
     expect(el).toHaveStyle("--simtip-arrow-color: #e74c3c");
+  });
+
+  it("should allow CSS variables to override variant colors", () => {
+    const theme = document.createElement("style");
+    theme.textContent = `
+      .custom-tooltip-theme {
+        --simtip-light-background-color: red;
+        --simtip-light-text-color: blue;
+      }
+    `;
+    document.head.append(theme);
+
+    render(
+      <Tooltip
+        content="Tooltip"
+        open
+        variant="light"
+        className="custom-tooltip-theme"
+      >
+        <span>Hover me</span>
+      </Tooltip>,
+    );
+
+    const computedStyle = getComputedStyle(screen.getByTestId("tooltip"));
+    expect(
+      computedStyle.getPropertyValue("--simtip-light-background-color"),
+    ).toBe("red");
+    expect(computedStyle.getPropertyValue("--simtip-light-text-color")).toBe(
+      "blue",
+    );
+
+    theme.remove();
   });
 
   it("should show on hover and hide on leave", async () => {
