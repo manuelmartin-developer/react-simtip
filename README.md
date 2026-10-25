@@ -108,30 +108,49 @@ const App = () => (
 </Tooltip>
 ```
 
-### With CSS variables (global theming)
-
-Set defaults for all tooltips at once:
+### With CSS variables
 
 ```css
 :root {
-  --simtip-default-background-color: #333;
-  --simtip-default-border-radius: 8px;
-  --simtip-default-font-size: 14px;
-  --simtip-default-padding: 12px;
-  --simtip-default-text-color: #fff;
-  --simtip-default-box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  --simtip-default-animation-duration: 300ms;
-  --simtip-default-max-width: 400px;
+  --simtip-background-color: #333;
+  --simtip-text-color: #fff;
+  --simtip-border-radius: 8px;
+  --simtip-font-size: 14px;
+  --simtip-padding: 12px;
+  --simtip-box-shadow: 0 4px 12px rgb(0 0 0 / 30%);
+  --simtip-animation-duration: 300ms;
+  --simtip-max-width: 400px;
 }
 ```
 
-Override per-instance with inline styles or the `className` prop:
+The same variables can be set on a container or an instance-specific class.
+`--simtip-background-color` and `--simtip-text-color` override any variant.
+For variant-specific overrides, use the corresponding token, such as
+`--simtip-light-background-color` or `--simtip-light-text-color`. Component
+styling props take precedence over CSS variables for that instance.
 
 ```css
 .my-tooltip {
-  --simtip-background-color: red;
+  --simtip-light-background-color: #333;
+  --simtip-light-text-color: white;
 }
 ```
+
+```jsx
+<Tooltip content="Custom theme" className="my-tooltip" variant="light">
+  <button>Hover me</button>
+</Tooltip>
+```
+
+Available variables are `--simtip-background-color`, `--simtip-text-color`,
+`--simtip-arrow-color`, `--simtip-border`, `--simtip-border-radius`,
+`--simtip-box-shadow`, `--simtip-font-size`, `--simtip-max-width`,
+`--simtip-padding`, and `--simtip-animation-duration`. Background and text
+tokens are also available per variant as `--simtip-{variant}-background-color`
+and `--simtip-{variant}-text-color` for `dark`, `light`, `success`, `warning`,
+`error`, and `info`. The arrow follows the background color unless
+`--simtip-arrow-color` is set explicitly. The `--simtip-default-*` variables
+define the defaults in the stylesheet.
 
 ## License
 

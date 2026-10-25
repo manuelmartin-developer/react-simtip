@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react-vite";
 import Tooltip from "../../Tooltip";
 import { TooltipProps } from "../../Tooltip.types";
 import React from "react";
-import pkg from "../../../package.json";
+import pkg from "../../../package.json" with { type: "json" };
 
 const meta: Meta<TooltipProps> = {
   argTypes: {
@@ -183,6 +183,143 @@ Playground.args = {
   maxWidth: undefined,
   border: undefined,
   shadow: undefined,
+};
+
+Playground.parameters = {
+  cssprops: {
+    "simtip-animation-duration": {
+      category: "Wrapper",
+      control: "text",
+      description: "Animation duration (for example, 300ms)",
+      value: "300ms",
+    },
+    "simtip-background-color": {
+      category: "Wrapper",
+      control: "color",
+      description: "Background color; overrides the selected variant",
+      value: "",
+    },
+    "simtip-arrow-color": {
+      category: "Wrapper",
+      control: "color",
+      description: "Arrow color; defaults to the tooltip background",
+      value: "",
+    },
+    "simtip-border-radius": {
+      category: "Wrapper",
+      control: "text",
+      description: "The border radius of the tooltip",
+      value: "4px",
+    },
+    "simtip-border": {
+      category: "Wrapper",
+      control: "text",
+      description: "The border of the tooltip",
+      value: "",
+    },
+    "simtip-box-shadow": {
+      category: "Wrapper",
+      control: "text",
+      description: "The box shadow of the tooltip",
+      value: "",
+    },
+    "simtip-font-size": {
+      category: "Wrapper",
+      control: "text",
+      description: "Font size (for example, 14px)",
+      value: "11px",
+    },
+    "simtip-max-width": {
+      category: "Wrapper",
+      control: "text",
+      description: "The max width of the tooltip",
+      value: "300px",
+    },
+    "simtip-padding": {
+      category: "Wrapper",
+      control: "text",
+      description: "The padding of the tooltip",
+      value: "6px",
+    },
+    "simtip-text-color": {
+      category: "Wrapper",
+      control: "color",
+      description: "The text color of the tooltip",
+      value: "",
+    },
+    "simtip-dark-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the dark variant",
+      value: "",
+    },
+    "simtip-dark-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the dark variant",
+      value: "",
+    },
+    "simtip-light-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the light variant",
+      value: "",
+    },
+    "simtip-light-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the light variant",
+      value: "",
+    },
+    "simtip-success-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the success variant",
+      value: "",
+    },
+    "simtip-success-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the success variant",
+      value: "",
+    },
+    "simtip-warning-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the warning variant",
+      value: "",
+    },
+    "simtip-warning-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the warning variant",
+      value: "",
+    },
+    "simtip-error-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the error variant",
+      value: "",
+    },
+    "simtip-error-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the error variant",
+      value: "",
+    },
+    "simtip-info-background-color": {
+      category: "Variants",
+      control: "color",
+      description: "Background override for the info variant",
+      value: "",
+    },
+    "simtip-info-text-color": {
+      category: "Variants",
+      control: "color",
+      description: "Text override for the info variant",
+      value: "",
+    },
+  },
 };
 
 export const Welcome: StoryObj<TooltipProps> = () => {

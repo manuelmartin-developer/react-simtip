@@ -6,7 +6,11 @@ const config: StorybookConfig = {
     "../src/__docs__/**/*.stories.tsx",
   ],
 
-  addons: ["@storybook/addon-a11y", "@storybook/addon-docs"],
+  addons: [
+    "@storybook/addon-a11y",
+    "@storybook/addon-docs",
+    "@ljcl/storybook-addon-cssprops",
+  ],
 
   core: {
     disableTelemetry: true,
