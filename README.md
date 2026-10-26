@@ -10,7 +10,7 @@ A simple, zero-dependency tooltip component for React.
 
 ## Features
 
-- ⚡️ **Lightweight** (~5 kB gzipped).
+- ⚡️ **Lightweight** (~2.5 kB gzipped).
 - 📦 **Zero dependencies**.
 - 🌳 **Tree-shakeable**
 - 📝 **Written in TypeScript**.
@@ -49,28 +49,28 @@ const App = () => (
 
 ## Props
 
-| Prop               | Type                      | Default                  | Description |
-| ------------------ | ------------------------- | ------------------------ | ----------- |
-| `content`          | `string \| ReactNode`     | —                        | Tooltip content. |
-| `children`         | `ReactNode`               | —                        | Trigger element. |
-| `placement`        | `"top" \| "bottom" \| "left" \| "right"` | `"top"` | Tooltip position relative to trigger. |
-| `variant`          | `"dark" \| "light" \| "success" \| "warning" \| "error" \| "info"` | `"dark"` | Color variant. |
-| `animation`        | `"fade" \| "scale" \| "flip" \| "slide" \| "swing" \| "bounce" \| "flicker"` | — | Entrance animation. |
-| `animationDuration` | `number`                 | `300`                    | Animation duration in ms. |
-| `offset`           | `number`                  | `8`                      | Gap between tooltip and trigger in px. |
-| `hasArrow`         | `boolean`                 | `false`                  | Show arrow pointing to trigger. |
-| `showDelay`        | `number`                  | `100`                    | Delay before showing in ms. |
-| `disableInteractive` | `boolean`               | `false`                  | Close tooltip when pointer leaves trigger. |
-| `open`             | `boolean`                 | —                        | Controlled open state. |
-| `backgroundColor`  | `string`                  | `rgb(97 97 97 / 92%)`    | Background color. |
-| `color`            | `string`                  | `#fff`                   | Text color. |
-| `border`           | `string`                  | `none`                   | CSS border shorthand (e.g. `"1px solid red"`). |
-| `shadow`           | `string`                  | `none`                   | CSS box-shadow (e.g. `"0 2px 8px rgba(0,0,0,0.3)"`). |
-| `padding`          | `number`                  | `6`                      | Inner padding in px. |
-| `borderRadius`     | `number`                  | `4`                      | Border radius in px. |
-| `fontSize`         | `number`                  | `11`                     | Font size in px. |
-| `maxWidth`         | `number`                  | `300`                    | Max width in px. |
-| `className`        | `string \| (string \| null \| undefined)[]` | — | Additional CSS classes. |
+| Prop                 | Type                                                                         | Default               | Description                                          |
+| -------------------- | ---------------------------------------------------------------------------- | --------------------- | ---------------------------------------------------- |
+| `content`            | `string \| ReactNode`                                                        | —                     | Tooltip content.                                     |
+| `children`           | `ReactNode`                                                                  | —                     | Trigger element.                                     |
+| `placement`          | `"top" \| "bottom" \| "left" \| "right"`                                     | `"top"`               | Tooltip position relative to trigger.                |
+| `variant`            | `"dark" \| "light" \| "success" \| "warning" \| "error" \| "info"`           | `"dark"`              | Color variant.                                       |
+| `animation`          | `"fade" \| "scale" \| "flip" \| "slide" \| "swing" \| "bounce" \| "flicker"` | —                     | Entrance animation.                                  |
+| `animationDuration`  | `number`                                                                     | `300`                 | Animation duration in ms.                            |
+| `offset`             | `number`                                                                     | `8`                   | Gap between tooltip and trigger in px.               |
+| `hasArrow`           | `boolean`                                                                    | `false`               | Show arrow pointing to trigger.                      |
+| `showDelay`          | `number`                                                                     | `100`                 | Delay before showing in ms.                          |
+| `disableInteractive` | `boolean`                                                                    | `false`               | Close tooltip when pointer leaves trigger.           |
+| `open`               | `boolean`                                                                    | —                     | Controlled open state.                               |
+| `backgroundColor`    | `string`                                                                     | `rgb(97 97 97 / 92%)` | Background color.                                    |
+| `color`              | `string`                                                                     | `#fff`                | Text color.                                          |
+| `border`             | `string`                                                                     | `none`                | CSS border shorthand (e.g. `"1px solid red"`).       |
+| `shadow`             | `string`                                                                     | `none`                | CSS box-shadow (e.g. `"0 2px 8px rgba(0,0,0,0.3)"`). |
+| `padding`            | `number`                                                                     | `6`                   | Inner padding in px.                                 |
+| `borderRadius`       | `number`                                                                     | `4`                   | Border radius in px.                                 |
+| `fontSize`           | `number`                                                                     | `11`                  | Font size in px.                                     |
+| `maxWidth`           | `number`                                                                     | `300`                 | Max width in px.                                     |
+| `className`          | `string \| (string \| null \| undefined)[]`                                  | —                     | Additional CSS classes.                              |
 
 ## Styling
 

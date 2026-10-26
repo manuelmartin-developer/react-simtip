@@ -1,4 +1,4 @@
-import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{i as t,r as n}from"./react-rTBBE96Z.js";import{t as r}from"./jsx-runtime-MKhVqBIO.js";import{a as i,c as a,o}from"./blocks-BJHJHjzE.js";import{n as s,t as c}from"./changelog.stories-DPYxVN1-.js";var l;function u(){return(u=e((()=>{l=`# Changelog
+import{n as e}from"./rolldown-runtime-sJBDdmOt.js";import{i as t,r as n}from"./react-ClhpoVNF.js";import{t as r}from"./jsx-runtime-MKhVqBIO.js";import{a as i,c as a,o}from"./blocks-c7sn4UcY.js";import{n as s,t as c}from"./changelog.stories-DPYxVN1-.js";var l;function u(){return(u=e((()=>{l=`# Changelog
 
 <!-- All notable changes to this project will be documented in this file.
 
@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html). -->
 
 <br /><br />
+
+## [4.0.2] - 2026-20-25
+
+### Fixed
+
+- Dev dependency marked as dependency.
 
 ## [4.0.1] - 2026-20-25
 
